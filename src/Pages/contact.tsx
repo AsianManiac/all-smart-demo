@@ -18,6 +18,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
   Facebook,
@@ -41,14 +42,13 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log(formData);
   };
 
   return (
     <MaxWidthWrapper>
       {/* Contact Header */}
-      <section className="bg-primary text-primary-foreground py-16 px-4">
-        <div className="container mx-auto text-center">
+      <section className="bg-gray-900 text-primary-foreground py-16">
+        <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             Have questions? We'd love to hear from you. Send us a message and
@@ -57,7 +57,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="container mx-auto py-12 px-4">
+      <div className="py-12">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Contact Information */}
           <div className="space-y-6">
@@ -72,11 +72,11 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold">Main Office</p>
                     <p className="text-sm text-muted-foreground">
-                      123 TV Station Road
+                      New Bell
                       <br />
-                      Broadcasting District
+                      /
                       <br />
-                      City, Country
+                      Douala, Cameroon
                     </p>
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold">Phone</p>
                     <p className="text-sm text-muted-foreground">
-                      +123 456 7890
+                      +237 679 314 218
                     </p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold">Email</p>
                     <p className="text-sm text-muted-foreground">
-                      contact@tvstation.com
+                      contact@allsmartallstar.com
                     </p>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium">Name</label>
+                    <Label className="text-sm font-medium">Name</Label>
                     <Input
                       value={formData.name}
                       onChange={(e) =>
@@ -149,7 +149,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label className="text-sm font-medium">Email</label>
+                    <Label className="text-sm font-medium">Email</Label>
                     <Input
                       type="email"
                       value={formData.email}
@@ -161,7 +161,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div>
-                  <label className="text-sm font-medium">Subject</label>
+                  <Label className="text-sm font-medium">Subject</Label>
                   <Input
                     value={formData.subject}
                     onChange={(e) =>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium">Message</label>
+                  <Label className="text-sm font-medium">Message</Label>
                   <Textarea
                     value={formData.message}
                     onChange={(e) =>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full bg-gray-900">
                   Send Message
                 </Button>
               </form>

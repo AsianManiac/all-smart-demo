@@ -12,6 +12,7 @@ import {
   PlayCircle,
 } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const DAYS = [
   "Sunday",
@@ -38,49 +39,55 @@ interface Show extends RecommendedVideo {
 
 // YouTube video IDs for African reality TV shows
 const VIDEO_IDS = [
-  "https://www.youtube.com/watch?v=iu-LBY7NXD4",
-  "https://www.youtube.com/watch?v=Cbi9IrJYnk0",
-  "https://www.youtube.com/watch?v=5yEG6GhoJBs",
-  "https://www.youtube.com/watch?v=HQm5i_LemAU",
-  "https://www.youtube.com/watch?v=HIj8wU_rGIU",
-  "https://www.youtube.com/watch?v=eMBB8OK50tw",
-  "https://www.youtube.com/watch?v=0ZJgIjIuY7U",
-  "https://www.youtube.com/watch?v=b6VnWy-jjAM",
-  "https://www.youtube.com/watch?v=2CJglIAkHc0",
-  "https://www.youtube.com/watch?v=ekO7S3hu8gM",
-  "https://www.youtube.com/watch?v=TNhaISOUy6Q",
-  "https://www.youtube.com/watch?v=ZeNyjnneq_w",
-  "https://www.youtube.com/watch?v=AYBuL8FhgwA",
-  "https://www.youtube.com/watch?v=cc_xmawJ8Kg",
-  "https://www.youtube.com/watch?v=9G1jIV9XtLk",
-  "https://www.youtube.com/watch?v=QS9ZnQKkMqc",
-  "https://www.youtube.com/watch?v=3Yd_lzDYWVA",
-  "https://www.youtube.com/watch?v=7Qp5vcuMIlk",
-  "https://www.youtube.com/watch?v=XqZsoesa55w",
-  "https://www.youtube.com/watch?v=fJ9rUzIMcZQ",
-  "https://www.youtube.com/watch?v=JGwWNGJdvx8",
-  "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
-  "https://www.youtube.com/watch?v=RgKAFK5djSk",
-  "https://www.youtube.com/watch?v=YykjpeuMNEk",
-  "https://www.youtube.com/watch?v=OPf0YbXqDm0",
-  "https://www.youtube.com/watch?v=09R8_2nJtjg",
-  "https://www.youtube.com/watch?v=YQHsXMglC9A",
-  "https://www.youtube.com/watch?v=60ItHLz5WEA",
-  "https://www.youtube.com/watch?v=fRh_vgS2dFE",
-  "https://www.youtube.com/watch?v=JRfuAukYTKg",
-  "https://www.youtube.com/watch?v=aJOTlE1K90k",
-  "https://www.youtube.com/watch?v=kffacxfA7G4",
-  "https://www.youtube.com/watch?v=hT_nvWreIhg",
-  "https://www.youtube.com/watch?v=CevxZvSJLk8",
-  "https://www.youtube.com/watch?v=KQ6zr6kCPj8",
-  "https://www.youtube.com/watch?v=lWA2pjMjpBs",
-  "https://www.youtube.com/watch?v=qpgTC9MDx1o",
-  "https://www.youtube.com/watch?v=3tmd-ClpJxA",
-  "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
-  "https://www.youtube.com/watch?v=nfWlot6h_JM",
+  "https://www.youtube.com/watch?v=fum_mMfKftg",
+  "https://www.youtube.com/watch?v=4DvgJOL_E3I",
+  "https://www.youtube.com/watch?v=J5ROH_QTDO4",
+  "https://www.youtube.com/watch?v=A1aNjrDoHoo",
+  "https://www.youtube.com/watch?v=fmIS-xvdPcI",
+  "https://www.youtube.com/watch?v=gYMPe68a1lE",
+  "https://www.youtube.com/watch?v=aNWbJ99I7es",
+  "https://www.youtube.com/watch?v=AdUcYgiAKQU",
+  "https://www.youtube.com/watch?v=W5-Td8UcWBw",
+  "https://www.youtube.com/watch?v=aYBj6VwY9og",
+  "https://www.youtube.com/watch?v=Uzats0OZx8I",
+  "https://www.youtube.com/watch?v=1758rwDNl78",
+  "https://www.youtube.com/watch?v=7-c5oZ3oaRc",
+  "https://www.youtube.com/watch?v=6IwNP1fPZFA",
+  "https://www.youtube.com/watch?v=Kjx991G_xgA",
+  "https://www.youtube.com/watch?v=0cg2mLz_Re4",
+  "https://www.youtube.com/watch?v=bPjoHiFJCak",
+  "https://www.youtube.com/watch?v=pUKiCo0iD9I",
+  "https://www.youtube.com/watch?v=y2ot4-n6HVs",
+  "https://www.youtube.com/watch?v=pFFhkTyh52g",
+  "https://www.youtube.com/watch?v=c17Sm-ISeAw",
+  "https://www.youtube.com/watch?v=pAh3dfFUhJg",
+  "https://www.youtube.com/watch?v=Mhbx-0dAKiQ",
+  "https://www.youtube.com/watch?v=b9HQMSjhbf0",
+  "https://www.youtube.com/watch?v=thaRvv1i3XI",
+  "https://www.youtube.com/watch?v=SoRQPAK2jGE",
+  "https://www.youtube.com/watch?v=cll6wgAyIBs",
+  "https://www.youtube.com/watch?v=v97e96hON1k",
+  "https://www.youtube.com/watch?v=l-7TnYigx-c",
+  "https://www.youtube.com/watch?v=gXDBH7Pll-c",
+  "https://www.youtube.com/watch?v=Iw2QbvpqC1s",
+  "https://www.youtube.com/watch?v=tkYUupgE1YY",
+  "https://www.youtube.com/watch?v=NCsqpJLECa4",
+  "https://www.youtube.com/watch?v=pNvfLNztmAo",
+  "https://www.youtube.com/watch?v=uU4lsTdZgyk",
+  "https://www.youtube.com/watch?v=Bga83IxOGds",
+  "https://www.youtube.com/watch?v=koX-MPWV1Gg",
+  "https://www.youtube.com/watch?v=jopyPP6bnNQ",
+  "https://www.youtube.com/watch?v=NWJTxbOUDDY",
+  "https://www.youtube.com/watch?v=ojW-n3hGJM4",
+  "https://www.youtube.com/watch?v=gFEpMBctHkY",
+  "https://www.youtube.com/watch?v=4fscupufUrg",
+  "https://www.youtube.com/watch?v=ejm1aRCmmos",
+  "https://www.youtube.com/watch?v=dK7HvAF_WIY",
+  "https://www.youtube.com/watch?v=6xOwVC98Cjc",
 ];
 
 export default function SchedulePage() {
+  const navigate = useNavigate();
   const [selectedDay, setSelectedDay] = useState(DAYS[0]);
   const [shows, setShows] = useState<Show[]>([]);
   const [loading, setLoading] = useState(true);
@@ -177,7 +184,10 @@ export default function SchedulePage() {
 
                         <div className="md:w-1/3 flex justify-end items-center">
                           {show.status === "live" && (
-                            <Button className="gap-2">
+                            <Button
+                              className="gap-2"
+                              onClick={() => navigate(`/shows/${show.id}`)}
+                            >
                               <PlayCircle className="w-5 h-5" />
                               Watch Now
                             </Button>
@@ -210,14 +220,19 @@ export default function SchedulePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingShows.map((show) => (
               <Card key={show.id} className="p-4">
-                <div className="aspect-video mb-4">
+                <div
+                  onClick={() => navigate(`/shows/${show.id}`)}
+                  className="aspect-video mb-4 cursor-pointer"
+                >
                   <img
                     src={show.channel.avatar || "/placeholder.svg"}
                     alt={show.title}
                     className="w-full h-full object-cover rounded-md"
                   />
                 </div>
-                <h3 className="font-semibold mb-2">{show.title}</h3>
+                <Link to={`/shows/${show.id}`} className="font-semibold mb-2">
+                  {show.title}
+                </Link>
                 <p className="text-sm text-muted-foreground mb-2">
                   {show.day} at {show.time}
                 </p>
@@ -235,14 +250,19 @@ export default function SchedulePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {completedShows.map((show) => (
               <Card key={show.id} className="p-4">
-                <div className="aspect-video mb-4">
+                <div
+                  onClick={() => navigate(`/shows/${show.id}`)}
+                  className="aspect-video mb-4 cursor-pointer"
+                >
                   <img
                     src={show.channel.avatar || "/placeholder.svg"}
                     alt={show.title}
                     className="w-full h-full object-cover rounded-md"
                   />
                 </div>
-                <h3 className="font-semibold mb-2">{show.title}</h3>
+                <Link to={`/shows/${show.id}`} className="font-semibold mb-2">
+                  {show.title}
+                </Link>
                 <p className="text-sm text-muted-foreground mb-2">
                   Aired on {show.day} at {show.time}
                 </p>

@@ -1,3 +1,4 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import RecommendedVideos from "@/components/recommended-videos";
 import { Skeleton } from "@/components/ui/skeleton";
 import VideoComments from "@/components/video-comments";
@@ -7,7 +8,7 @@ import {
   getRecommendedVideos,
   getVideoMetadata,
 } from "@/lib/video";
-import type { ChannelVideos, RecommendedVideo, VideoMetadata } from "@/types";
+import type { RecommendedVideo, VideoMetadata } from "@/types";
 import { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import { useParams } from "react-router-dom";
@@ -16,42 +17,69 @@ export default function ViewShow() {
   const { showId } = useParams<{ showId: string }>();
   const [playing, setPlaying] = useState(false);
   const [videoData, setVideoData] = useState<VideoMetadata | null>(null);
-  const [channelVideos, setChannelVideos] = useState<ChannelVideos | null>(
-    null
-  );
   const [recommendedVideos, setRecommendedVideos] = useState<
     RecommendedVideo[]
   >([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const playerRef = useRef<ReactPlayer>(null);
   const videoUrl = `https://www.youtube.com/watch?v=${showId}`;
   // const videoUrl = "https://www.youtube.com/watch?v=iu-LBY7NXD4";
 
   const recommendedUrls = [
-    "https://www.youtube.com/watch?v=NqzdVN2tyvQ",
-    "https://www.youtube.com/watch?v=Cbi9IrJYnk0",
-    "https://www.youtube.com/watch?v=5yEG6GhoJBs",
-    "https://www.youtube.com/watch?v=HQm5i_LemAU",
-    "https://www.youtube.com/watch?v=HIj8wU_rGIU",
-    "https://www.youtube.com/watch?v=eMBB8OK50tw",
-    "https://www.youtube.com/watch?v=0ZJgIjIuY7U",
-    "https://www.youtube.com/watch?v=b6VnWy-jjAM",
-    "https://www.youtube.com/watch?v=2CJglIAkHc0",
-    "https://www.youtube.com/watch?v=ekO7S3hu8gM",
-    "https://www.youtube.com/watch?v=TNhaISOUy6Q",
-    "https://www.youtube.com/watch?v=ZeNyjnneq_w",
-    "https://www.youtube.com/watch?v=AYBuL8FhgwA",
-    "https://www.youtube.com/watch?v=cc_xmawJ8Kg",
+    "https://www.youtube.com/watch?v=fum_mMfKftg",
+    "https://www.youtube.com/watch?v=4DvgJOL_E3I",
+    "https://www.youtube.com/watch?v=J5ROH_QTDO4",
+    "https://www.youtube.com/watch?v=A1aNjrDoHoo",
+    "https://www.youtube.com/watch?v=fmIS-xvdPcI",
+    "https://www.youtube.com/watch?v=gYMPe68a1lE",
+    "https://www.youtube.com/watch?v=aNWbJ99I7es",
+    "https://www.youtube.com/watch?v=AdUcYgiAKQU",
+    "https://www.youtube.com/watch?v=W5-Td8UcWBw",
+    "https://www.youtube.com/watch?v=aYBj6VwY9og",
+    "https://www.youtube.com/watch?v=Uzats0OZx8I",
+    "https://www.youtube.com/watch?v=1758rwDNl78",
+    "https://www.youtube.com/watch?v=7-c5oZ3oaRc",
+    "https://www.youtube.com/watch?v=6IwNP1fPZFA",
+    "https://www.youtube.com/watch?v=Kjx991G_xgA",
+    "https://www.youtube.com/watch?v=0cg2mLz_Re4",
+    "https://www.youtube.com/watch?v=bPjoHiFJCak",
+    "https://www.youtube.com/watch?v=pUKiCo0iD9I",
+    "https://www.youtube.com/watch?v=y2ot4-n6HVs",
+    "https://www.youtube.com/watch?v=pFFhkTyh52g",
+    "https://www.youtube.com/watch?v=c17Sm-ISeAw",
+    "https://www.youtube.com/watch?v=pAh3dfFUhJg",
+    "https://www.youtube.com/watch?v=Mhbx-0dAKiQ",
+    "https://www.youtube.com/watch?v=b9HQMSjhbf0",
+    "https://www.youtube.com/watch?v=thaRvv1i3XI",
+    "https://www.youtube.com/watch?v=SoRQPAK2jGE",
+    "https://www.youtube.com/watch?v=cll6wgAyIBs",
+    "https://www.youtube.com/watch?v=v97e96hON1k",
+    "https://www.youtube.com/watch?v=l-7TnYigx-c",
+    "https://www.youtube.com/watch?v=gXDBH7Pll-c",
+    "https://www.youtube.com/watch?v=Iw2QbvpqC1s",
+    "https://www.youtube.com/watch?v=tkYUupgE1YY",
+    "https://www.youtube.com/watch?v=NCsqpJLECa4",
+    "https://www.youtube.com/watch?v=pNvfLNztmAo",
+    "https://www.youtube.com/watch?v=uU4lsTdZgyk",
+    "https://www.youtube.com/watch?v=Bga83IxOGds",
+    "https://www.youtube.com/watch?v=koX-MPWV1Gg",
+    "https://www.youtube.com/watch?v=jopyPP6bnNQ",
+    "https://www.youtube.com/watch?v=NWJTxbOUDDY",
+    "https://www.youtube.com/watch?v=ojW-n3hGJM4",
+    "https://www.youtube.com/watch?v=gFEpMBctHkY",
+    "https://www.youtube.com/watch?v=4fscupufUrg",
+    "https://www.youtube.com/watch?v=ejm1aRCmmos",
+    "https://www.youtube.com/watch?v=dK7HvAF_WIY",
+    "https://www.youtube.com/watch?v=6xOwVC98Cjc",
   ];
 
   const fetchChannels = async () => {
     try {
-      const data = await getChannelVideos("UCX6OQ3DkcsbYNE6H8uQQuVA");
-      setChannelVideos(data);
+      await getChannelVideos("UCfbFI_j18JOonpwt35UCQOA");
     } catch (error) {
       console.error("Error fetching channel videos:", error);
     } finally {
-      setLoading(true);
+      setLoading(false);
     }
   };
   useEffect(() => {
@@ -65,7 +93,7 @@ export default function ViewShow() {
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
-        setLoading(true);
+        setLoading(false);
       }
     };
     fetchData();
@@ -77,82 +105,72 @@ export default function ViewShow() {
       playerRef.current.seekTo(seconds);
     }
   };
-  if (loading)
-    return (
-      <div>
-        <h1>{channelVideos?.channel.title}</h1>
-        <p>{channelVideos?.channel.description}</p>
-        <img src={channelVideos?.channel.thumbnail} alt="Channel Thumbnail" />
+  // if (loading)
+  //   return (
+  //     <div>
+  //       <h1>{channelVideos?.channel.title}</h1>
+  //       <p>{channelVideos?.channel.description}</p>
+  //       <img src={channelVideos?.channel.thumbnail} alt="Channel Thumbnail" />
 
-        <h2>Live Streams</h2>
-        <ul>
-          {channelVideos?.liveStreams.map((video) => (
-            <li key={video.id}>
-              <img src={video.thumbnail} alt={video.title} />
-              <h3>{video.title}</h3>
-              <p>{video.publishedAt}</p>
-            </li>
-          ))}
-        </ul>
+  //       <h2>Live Streams</h2>
+  //       <ul>
+  //         {channelVideos?.liveStreams.map((video) => (
+  //           <li key={video.id}>
+  //             <img src={video.thumbnail} alt={video.title} />
+  //             <h3>{video.title}</h3>
+  //             <p>{video.publishedAt}</p>
+  //           </li>
+  //         ))}
+  //       </ul>
 
-        <h2>Uploads</h2>
-        <ul>
-          {channelVideos?.uploads.map((video) => (
-            <li key={video.id}>
-              <img src={video.thumbnail} alt={video.title} />
-              <h3>{video.title}</h3>
-              <p>{video.publishedAt}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
+  //       <h2>Uploads</h2>
+  //       <ul>
+  //         {channelVideos?.uploads.map((video) => (
+  //           <li key={video.id}>
+  //             <img src={video.thumbnail} alt={video.title} />
+  //             <h3>{video.title}</h3>
+  //             <p>{video.publishedAt}</p>
+  //           </li>
+  //         ))}
+  //       </ul>
+  //     </div>
+  //   );
+  console.log();
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto py-6 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main Content */}
-          <div className="lg:col-span-2">
-            <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              {loading ? (
-                <Skeleton className="w-full h-full" />
-              ) : (
-                <ReactPlayer
-                  ref={playerRef}
-                  url={videoUrl}
-                  width="100%"
-                  height="100%"
-                  playing={playing}
-                  controls
-                  onPlay={() => setPlaying(true)}
-                  onPause={() => setPlaying(false)}
-                />
-              )}
-            </div>
-
-            <div className="mt-4 space-y-4">
-              {loading ? (
-                <VideoDetailsSkeleton />
-              ) : (
-                videoData && (
-                  <VideoDetails
-                    videoData={videoData}
-                    onTimestampClick={handleTimestampClick}
-                  />
-                )
-              )}
-              <div className="shrink-0 bg-border h-[1px] w-full" />
-              {loading ? (
-                <CommentsSkeleton />
-              ) : (
-                videoData && <VideoComments comments={videoData.comments} />
-              )}
-            </div>
+    <MaxWidthWrapper className=" bg-background">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Main Content */}
+        <div className="lg:col-span-2">
+          <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+            {loading ? (
+              <Skeleton className="w-full h-full" />
+            ) : (
+              <ReactPlayer
+                ref={playerRef}
+                url={videoUrl}
+                width="100%"
+                height="100%"
+                playing={playing}
+                controls
+                onPlay={() => setPlaying(true)}
+                onPause={() => setPlaying(false)}
+              />
+            )}
           </div>
 
-          {/* Recommended Videos */}
-          <div className="lg:col-span-1">
+          <div className="mt-4 space-y-4">
+            {loading ? (
+              <VideoDetailsSkeleton />
+            ) : (
+              videoData && (
+                <VideoDetails
+                  videoData={videoData}
+                  onTimestampClick={handleTimestampClick}
+                />
+              )
+            )}
+            <div className="shrink-0 bg-border h-[1px] w-full" />
             {loading ? (
               <RecommendedVideosSkeleton />
             ) : (
@@ -160,8 +178,17 @@ export default function ViewShow() {
             )}
           </div>
         </div>
+
+        {/* Recommended Videos */}
+        <div className="lg:col-span-1">
+          {loading ? (
+            <CommentsSkeleton />
+          ) : (
+            videoData && <VideoComments comments={videoData.comments} />
+          )}
+        </div>
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 }
 

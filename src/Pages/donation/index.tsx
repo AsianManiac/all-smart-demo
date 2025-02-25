@@ -99,7 +99,7 @@ export default function Donation() {
     <div className="container mx-auto py-10 px-4">
       <Card className="max-w-2xl mx-auto">
         <CardHeader>
-          <CardTitle>Make a Donation</CardTitle>
+          <CardTitle className="text-xl">Make a Donation</CardTitle>
           <CardDescription>
             Support our mission with your contribution
           </CardDescription>

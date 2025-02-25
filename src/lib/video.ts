@@ -32,7 +32,6 @@ export async function getChannelVideos(
         key: API_KEY,
       },
     });
-
     const uploads = uploadsResponse.data.items.map((item: any) => ({
       id: item.snippet.resourceId.videoId,
       title: item.snippet.title,

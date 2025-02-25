@@ -64,6 +64,36 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
         ? comment.textDisplay.slice(0, 300) + "..."
         : comment.textDisplay;
 
+    const tailwindColors = [
+      "bg-red-500",
+      "bg-yello-500",
+      "bg-green-500",
+      "bg-blue-500",
+      "bg-indigo-500",
+      "bg-purple-500",
+      "bg-pink-500",
+      "bg-orange-500",
+      "bg-teal-500",
+      "bg-cyan-500",
+    ];
+    const name = comment.author;
+
+    const generateRandomTailwindColor = (seed: string): string => {
+      let hash = 0;
+      for (let i = 0; i < seed.length; i++) {
+        hash = seed.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      const index = Math.abs(hash) % tailwindColors.length;
+      return tailwindColors[index];
+    };
+
+    const initials = name
+      .split(" ")
+      .map((word) => word[1])
+      .join("")
+      .toUpperCase();
+    const fallbackColorClass = generateRandomTailwindColor(name);
+
     return (
       <div
         key={comment.id}
@@ -74,8 +104,8 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
             src={comment.authorProfileImageUrl}
             alt={comment.author}
           />
-          <AvatarFallback>
-            {comment.author.slice(0, 2).toUpperCase()}
+          <AvatarFallback className={`${fallbackColorClass} text-white`}>
+            {initials}
           </AvatarFallback>
         </Avatar>
         <div className="flex-1">
@@ -143,7 +173,7 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
-        <h2 className="text-lg font-semibold">{comments.length} Comments</h2>
+        <h2 className="text-xl font-semibold">{comments.length} Comments</h2>
         <Select
           onValueChange={(value) => sortComments(value as "top" | "newest")}
         >

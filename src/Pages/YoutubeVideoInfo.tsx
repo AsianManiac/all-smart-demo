@@ -103,7 +103,6 @@ const YoutubeVideoInfo: React.FC = () => {
               : undefined,
           }));
           setData(videoData);
-          console.log(data);
 
           return {
             id: videoData.id,

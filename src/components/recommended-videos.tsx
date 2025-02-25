@@ -12,8 +12,8 @@ interface RecommendedVideosProps {
 const RecommendedVideos: React.FC<RecommendedVideosProps> = ({ videos }) => {
   return (
     <div className="space-y-4">
-      <h2 className="font-semibold mb-4">Recommended Videos</h2>
-      {videos.map((video) => (
+      <h2 className="font-semibold mb-4 text-xl">Recommended Videos</h2>
+      {videos.slice(2, 15).map((video) => (
         <Link
           to={`/shows/${video.id}`}
           key={video.id}
@@ -43,7 +43,7 @@ const RecommendedVideos: React.FC<RecommendedVideosProps> = ({ videos }) => {
                   alt={video.channel.name}
                 />
                 <AvatarFallback>
-                  {video.channel.name.slice(0, 2).toUpperCase()}
+                  {video.channel.name.slice(0, 1).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
               <p className="text-xs text-muted-foreground">

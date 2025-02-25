@@ -20,7 +20,6 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
     const urlRegex = /(https?:\/\/[^\s]+)/g;
     const hashtagRegex = /#(\w+)/g;
     const timestamps = parseTimestamps(text);
-    console.log(timestamps);
 
     return text.split("\n").map((line, i) => {
       let processedLine = line;

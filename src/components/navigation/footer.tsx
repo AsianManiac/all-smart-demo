@@ -40,18 +40,18 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
-            <div className="flex space-x-4">
+            <div className="flex space-x-5">
               <Link to="#" className="text-blue-500 hover:text-blue-400">
-                <Facebook size={24} />
+                <Facebook size={30} />
               </Link>
               <Link to="#" className="text-red-500 hover:text-red-400">
-                <Youtube size={24} />
+                <Youtube size={30} />
               </Link>
               <Link to="#" className="text-pink-500 hover:text-pink-400">
-                <Instagram size={24} />
+                <Instagram size={30} />
               </Link>
               <Link to="#" className="text-blue-400 hover:text-blue-300">
-                <Twitter size={24} />
+                <Twitter size={30} />
               </Link>
             </div>
           </div>

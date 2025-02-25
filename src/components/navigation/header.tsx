@@ -1,4 +1,3 @@
-import { Tv } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface HeaderProps {
@@ -7,12 +6,15 @@ interface HeaderProps {
 
 const Header = ({ showDonateButton }: HeaderProps) => {
   return (
-    <header className="bg-gradient-to-r from-purple-700 to-indigo-800 text-white py-4">
+    <header className="bg-gradient-to-r from-[#0A0910] via-[#2A2240] to-[#181C30] text-white py-4">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
-            <Tv size={32} />
-            <span className="text-2xl font-bold">Reality TV</span>
+            <img
+              src="/images/logo.svg"
+              className="h-10"
+              alt="Allsmart Allstar"
+            />
           </Link>
           <nav className="md:block hidden">
             <ul className="flex space-x-6">
