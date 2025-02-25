@@ -1,0 +1,63 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { formatNumber } from "@/lib/video";
+import { RecommendedVideo } from "@/types";
+import { PlayCircle } from "lucide-react";
+import React from "react";
+
+interface RecommendedVideosProps {
+  videos: RecommendedVideo[];
+}
+
+const RecommendedVideos: React.FC<RecommendedVideosProps> = ({ videos }) => {
+  return (
+    <div className="space-y-4">
+      <h2 className="font-semibold mb-4">Recommended Videos</h2>
+      {videos.map((video) => (
+        <div key={video.id} className="flex gap-2 group cursor-pointer">
+          <div className="relative flex-shrink-0">
+            <img
+              src={video.thumbnail || "/placeholder.svg"}
+              alt={video.title}
+              className="w-40 h-24 object-cover rounded-lg"
+            />
+            <div className="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 rounded">
+              {video.duration}
+            </div>
+            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <PlayCircle className="w-8 h-8 text-white" />
+            </div>
+          </div>
+          <div className="flex-1">
+            <h3 className="font-semibold md:text-base line-clamp-2 group-hover:text-primary transition-colors">
+              {video.title}
+            </h3>
+            <div className="flex items-center gap-2 mt-1">
+              {/* <img
+                src={video.channel.avatar || "/placeholder.svg"}
+                alt={video.channel.name}
+                className="w-6 h-6 rounded-full"
+              /> */}
+              <Avatar className="w-6 h-6">
+                <AvatarImage
+                  src={video.channel.avatar}
+                  alt={video.channel.name}
+                />
+                <AvatarFallback>{video.channel.name}</AvatarFallback>
+              </Avatar>
+              <p className="text-xs text-muted-foreground">
+                {video.channel.name}
+              </p>
+            </div>
+            <div className="flex items-center gap-1 text-xs text-muted-foreground mt-1">
+              <span>{formatNumber(video.views)} views</span>
+              <span>•</span>
+              <span>{video.publishedAt}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default RecommendedVideos;
