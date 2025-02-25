@@ -70,3 +70,25 @@ export interface RecommendedVideo {
   views: string;
   publishedAt: string;
 }
+
+export interface ChannelVideos {
+  channel: {
+    id: string;
+    title: string;
+    description: string;
+    thumbnail: string;
+    subscriberCount: string;
+  };
+  uploads: {
+    id: string;
+    title: string;
+    thumbnail: string;
+    publishedAt: string;
+  }[];
+  liveStreams: {
+    id: string;
+    title: string;
+    thumbnail: string;
+    publishedAt: string;
+  }[];
+}

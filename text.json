@@ -1,73 +1,1045 @@
-Error fetching data:
-Object { stack: "AxiosError@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:397:18\nsettle@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1235:12\nonloadend@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1566:13\nEventHandlerNonNull*dispatchXhrRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1576:7\nxhr_default<@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1533:10\ndispatchRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2008:10\n_request@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2223:33\nrequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2120:25\nforEachMethodNoData/Axios.prototype[method]@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2242:17\nwrap@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:8:15\ngetVideoMetadata@http://localhost:5174/src/lib/video.ts?t=1740406892914:17:13\nfetchData@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:57:32\nViewShow/<@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:67:5\nreact-stack-bottom-frame@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:16242:20\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\ncommitHookEffectListMount@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7767:122\ncommitHookPassiveMountEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7825:60\nreconnectPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:9297:42\ndoubleInvokeEffectsOnFiber@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11282:207\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11253:78\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\ncommitDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11290:55\nflushPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11126:45\nnode_modules/react-dom/cjs/react-dom-client.development.js/commitRootImpl/<@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11042:30\nperformWorkUntilDeadline@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:35:58\n", message: "Request failed with status code 403", name: "AxiosError", code: "ERR_BAD_REQUEST", config: {…}, request: XMLHttpRequest, response: {…}, status: 403 }
-​
-code: "ERR_BAD_REQUEST"
-​
-config: Object { timeout: 0, xsrfCookieName: "XSRF-TOKEN", xsrfHeaderName: "X-XSRF-TOKEN", … }
-​
-message: "Request failed with status code 403"
-​
-name: "AxiosError"
-​
-request: XMLHttpRequest { readyState: 4, timeout: 0, withCredentials: false, … }
-​
-response: Object { data: {…}, status: 403, statusText: "", … }
-​​
-config: Object { timeout: 0, xsrfCookieName: "XSRF-TOKEN", xsrfHeaderName: "X-XSRF-TOKEN", … }
-​​​
-adapter: Array(3) [ "xhr", "http", "fetch" ]
-​​​
-data: undefined
-​​​
-env: Object { FormData: FormData(), Blob: Blob() }
-​​​
-headers: Object { Accept: "application/json, text/plain, */*", "Content-Type": undefined }
-​​​
-maxBodyLength: -1
-​​​
-maxContentLength: -1
-​​​
-method: "get"
-​​​
-params: Object { part: "snippet,replies", videoId: "ekO7S3hu8gM", key: "AIzaSyB3pX1iPXlp87WUS1gDidt_8WSdKqsDMAU" }
-​​​
-timeout: 0
-​​​
-transformRequest: Array [ transformRequest(data, headers) ]
-​​​
-transformResponse: Array [ transformResponse(data) ]
-​​​
-transitional: Object { silentJSONParsing: true, forcedJSONParsing: true, clarifyTimeoutError: false }
-​​​
-url: "https://www.googleapis.com/youtube/v3/commentThreads"
-​​​
-validateStatus: function validateStatus(status)
-​​​
-xsrfCookieName: "XSRF-TOKEN"
-​​​
-xsrfHeaderName: "X-XSRF-TOKEN"
-​​​
-<prototype>: Object { … }
-​​
-data: Object { error: {…} }
-​​​
-error: Object { code: 403, message: 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', errors: (1) […] }
-​​​
-<prototype>: Object { … }
-​​
-headers: Object { "content-encoding": "gzip", "content-length": "245", "content-type": "application/json; charset=UTF-8", … }
-​​
-request: XMLHttpRequest { readyState: 4, timeout: 0, withCredentials: false, … }
-​​
-status: 403
-​​
-statusText: ""
-​​
-<prototype>: Object { … }
-​
-stack: "AxiosError@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:397:18\nsettle@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1235:12\nonloadend@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1566:13\nEventHandlerNonNull*dispatchXhrRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1576:7\nxhr_default<@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1533:10\ndispatchRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2008:10\n_request@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2223:33\nrequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2120:25\nforEachMethodNoData/Axios.prototype[method]@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2242:17\nwrap@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:8:15\ngetVideoMetadata@http://localhost:5174/src/lib/video.ts?t=1740406892914:17:13\nfetchData@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:57:32\nViewShow/<@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:67:5\nreact-stack-bottom-frame@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:16242:20\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\ncommitHookEffectListMount@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7767:122\ncommitHookPassiveMountEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7825:60\nreconnectPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:9297:42\ndoubleInvokeEffectsOnFiber@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11282:207\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11253:78\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\ncommitDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11290:55\nflushPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11126:45\nnode_modules/react-dom/cjs/react-dom-client.development.js/commitRootImpl/<@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11042:30\nperformWorkUntilDeadline@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:35:58\n"
-​
-status: 403
-​
-<prototype>: Object { constructor: AxiosError(message, code, config, request, response), toJSON: toJSON(), stack: "", … }
-view-show.tsx:49:16
+[
+  {
+    "kind": "youtube#video",
+    "etag": "H6MN4OY1od49D6DpSylkrVQEeys",
+    "id": "Cbi9IrJYnk0",
+    "snippet": {
+      "publishedAt": "2025-02-21T06:33:55Z",
+      "channelId": "UCYCsWf2eQ7y6afOaSw4rXdw",
+      "title": "Build a Complete E-commerce Store with Admin Panel | API & Frontend | MERN Stack Tutorial | Class 5",
+      "description": "In this video, we’ll walk you through the process of building a fully functional E-commerce Store with a dedicated Admin Panel, using a separate API and frontend architecture. You’ll learn:\n\n🔹 MERN Stack (MongoDB, Express, React, Node.js)\n🔹 REST API for seamless communication between frontend & backend\n🔹 Admin Dashboard to manage products, orders, and users\n🔹 User Authentication (Login/Register)\n🔹 Product Listings, Cart, Checkout\n\nBy the end of this tutorial, you'll have a scalable, maintainable, and secure e-commerce application ready for production!\n\nGitHub Repo Link: https://github.com/masifcoder/techmobiles\n\nDon't forget to like, comment, and subscribe for more beginner-friendly coding tutorials.\n\n#MERNStack #EcommerceApp #ReactJS #NodeJS #APIDevelopment #FullStackTutorial",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/Cbi9IrJYnk0/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/Cbi9IrJYnk0/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/Cbi9IrJYnk0/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/Cbi9IrJYnk0/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/Cbi9IrJYnk0/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Muhammad Asif",
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "Build a Complete E-commerce Store with Admin Panel | API & Frontend | MERN Stack Tutorial | Class 5",
+        "description": "In this video, we’ll walk you through the process of building a fully functional E-commerce Store with a dedicated Admin Panel, using a separate API and frontend architecture. You’ll learn:\n\n🔹 MERN Stack (MongoDB, Express, React, Node.js)\n🔹 REST API for seamless communication between frontend & backend\n🔹 Admin Dashboard to manage products, orders, and users\n🔹 User Authentication (Login/Register)\n🔹 Product Listings, Cart, Checkout\n\nBy the end of this tutorial, you'll have a scalable, maintainable, and secure e-commerce application ready for production!\n\nGitHub Repo Link: https://github.com/masifcoder/techmobiles\n\nDon't forget to like, comment, and subscribe for more beginner-friendly coding tutorials.\n\n#MERNStack #EcommerceApp #ReactJS #NodeJS #APIDevelopment #FullStackTutorial"
+      }
+    },
+    "contentDetails": {
+      "duration": "PT41M27S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": false,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "27",
+      "likeCount": "4",
+      "favoriteCount": "0",
+      "commentCount": "3"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "VD3o5Er7fwCq_yKURGMy8wwjFtI",
+    "id": "5yEG6GhoJBs",
+    "snippet": {
+      "publishedAt": "2023-10-24T12:00:09Z",
+      "channelId": "UCrL69sErRwEyr7_p0qVCkOQ",
+      "title": "Redux - Complete Tutorial (with Redux Toolkit)",
+      "description": "🚀 Project React  → https://cosden.solutions/project-react\n📥 Import React (Newsletter) → https://cosden.solutions/newsletter?s=ytd\n\nJoin The Discord! → https://discord.cosdensolutions.io\nSource Code → https://github.com/cosdensolutions/code/tree/master/videos/long/redux-tutorial\nVSCode Theme | Font → Material Theme Darker | Menlo, Monaco \"monospace\"\n\nIn this video we will learn about Redux and Redux Toolkit. Redux is a state management library that makes it really easy to have global state in your React application. We are going to learn how to work with modern Redux, using Redux Toolkit to save ourselves some boilerplate code. This is the last video you will ever have to watch on Redux with Redux Toolkit! Enjoy!",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/5yEG6GhoJBs/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/5yEG6GhoJBs/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/5yEG6GhoJBs/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/5yEG6GhoJBs/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/5yEG6GhoJBs/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Cosden Solutions",
+      "tags": [
+        "react tutorial",
+        "react crash course",
+        "react developer",
+        "learn react",
+        "react hook",
+        "react hooks",
+        "react hooks tutorial",
+        "programming tutorial",
+        "react hooks explained",
+        "computer science",
+        "tutorial for beginners",
+        "react component",
+        "learn programming",
+        "web development",
+        "frontend development",
+        "coding for beginners",
+        "simple code",
+        "easy programming",
+        "react",
+        "react native",
+        "redux",
+        "redux tutorial",
+        "redux toolkit",
+        "redux react",
+        "redux react tutorial",
+        "react tutorial for beginners"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "Redux - Complete Tutorial (with Redux Toolkit)",
+        "description": "🚀 Project React  → https://cosden.solutions/project-react\n📥 Import React (Newsletter) → https://cosden.solutions/newsletter?s=ytd\n\nJoin The Discord! → https://discord.cosdensolutions.io\nSource Code → https://github.com/cosdensolutions/code/tree/master/videos/long/redux-tutorial\nVSCode Theme | Font → Material Theme Darker | Menlo, Monaco \"monospace\"\n\nIn this video we will learn about Redux and Redux Toolkit. Redux is a state management library that makes it really easy to have global state in your React application. We are going to learn how to work with modern Redux, using Redux Toolkit to save ourselves some boilerplate code. This is the last video you will ever have to watch on Redux with Redux Toolkit! Enjoy!"
+      },
+      "defaultAudioLanguage": "en"
+    },
+    "contentDetails": {
+      "duration": "PT37M1S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": true,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "282865",
+      "likeCount": "8795",
+      "favoriteCount": "0",
+      "commentCount": "445"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "-vpWR7KZZvDGzChTiMgMGeqlP8I",
+    "id": "HQm5i_LemAU",
+    "snippet": {
+      "publishedAt": "2025-02-18T11:54:34Z",
+      "channelId": "UC1nrlkYcj3hI8XnQgz8aK_g",
+      "title": "44. How to Automatically Save Gmail Attachments to Google Drive with Make.com | AI Automation Agency",
+      "description": "#Gmail #GoogleDrive #Automation #codersarts #aiautomation \nWant to streamline your workflow and never miss an important file again? In this tutorial, we’ll show you how to use Make.com to automatically save email attachments from Gmail directly to your Google Drive. This simple step-by-step guide will help you organize your files, improve team collaboration, and save valuable time!\n\nIn this video, you’ll learn:\n=================\n- How to set up a Make.com scenario to connect Gmail and Google Drive\n- Tips on choosing filters so only relevant attachments are saved\n- Best practices for folder organization in Google Drive\n- Troubleshooting common errors and ensuring everything runs smoothly\n\n\nReady to supercharge your productivity? Subscribe for more automation tips and tutorials!\n\n\n📲Follow us on our Social Media Handles : \n=================================\n🔗 Main Website: https://www.codersarts.com/\n📚 Codersarts Training: https://www.training.codersarts.com/\n🤖 Codersarts AI: https://www.ai.codersarts.com/\n📷 Instagram: https://www.instagram.com/codersarts/?hl=en\n📘 Facebook: https://www.facebook.com/codersarts2017\n💼 LinkedIn: https://in.linkedin.com/company/codersarts\n\n#AI #ML  #POCs #MVPs \nSave Gmail attachments to Google Drive automatically, how to automate Gmail attachments with Make.com, Gmail to Google Drive integration using Make.com, workflow automation for email attachments, best way to save email attachments in Google Drive, step-by-step tutorial for Make.com, email attachment management, automate email to drive workflow, Gmail attachment to Google Drive tutorial, file organization tips for Google Drive. #makecomedy \n #EmailAttachments #FileManagement #Productivity #Workflow #Tutorial #Integration #CloudStorage #TechTips #BusinessAutomation #ProductivityHacks",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/HQm5i_LemAU/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/HQm5i_LemAU/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/HQm5i_LemAU/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/HQm5i_LemAU/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/HQm5i_LemAU/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "CodersArts",
+      "tags": [
+        "Codersarts",
+        "ai assignment help",
+        "ml assignment help",
+        "machine learning homework",
+        "deep learning assignments",
+        "ai project help",
+        "tensorflow assignment help",
+        "pytorch assignment help",
+        "programming coursework help",
+        "data science coursework help",
+        "build a poc",
+        "mvp development services",
+        "ML live project training",
+        "codersarts training",
+        "Codersarts AI",
+        "coding help",
+        "ml upskilling",
+        "tech career boost",
+        "online coursework help",
+        "ML live project experience",
+        "hands-on AI project training",
+        "AI upskilling"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "44. How to Automatically Save Gmail Attachments to Google Drive with Make.com | AI Automation Agency",
+        "description": "#Gmail #GoogleDrive #Automation #codersarts #aiautomation \nWant to streamline your workflow and never miss an important file again? In this tutorial, we’ll show you how to use Make.com to automatically save email attachments from Gmail directly to your Google Drive. This simple step-by-step guide will help you organize your files, improve team collaboration, and save valuable time!\n\nIn this video, you’ll learn:\n=================\n- How to set up a Make.com scenario to connect Gmail and Google Drive\n- Tips on choosing filters so only relevant attachments are saved\n- Best practices for folder organization in Google Drive\n- Troubleshooting common errors and ensuring everything runs smoothly\n\n\nReady to supercharge your productivity? Subscribe for more automation tips and tutorials!\n\n\n📲Follow us on our Social Media Handles : \n=================================\n🔗 Main Website: https://www.codersarts.com/\n📚 Codersarts Training: https://www.training.codersarts.com/\n🤖 Codersarts AI: https://www.ai.codersarts.com/\n📷 Instagram: https://www.instagram.com/codersarts/?hl=en\n📘 Facebook: https://www.facebook.com/codersarts2017\n💼 LinkedIn: https://in.linkedin.com/company/codersarts\n\n#AI #ML  #POCs #MVPs \nSave Gmail attachments to Google Drive automatically, how to automate Gmail attachments with Make.com, Gmail to Google Drive integration using Make.com, workflow automation for email attachments, best way to save email attachments in Google Drive, step-by-step tutorial for Make.com, email attachment management, automate email to drive workflow, Gmail attachment to Google Drive tutorial, file organization tips for Google Drive. #makecomedy \n #EmailAttachments #FileManagement #Productivity #Workflow #Tutorial #Integration #CloudStorage #TechTips #BusinessAutomation #ProductivityHacks"
+      },
+      "defaultAudioLanguage": "en-IN"
+    },
+    "contentDetails": {
+      "duration": "PT10M39S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": true,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "35",
+      "likeCount": "1",
+      "favoriteCount": "0",
+      "commentCount": "0"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "7aJmEOS7a0YLc15tuRu3_EwGW0M",
+    "id": "HIj8wU_rGIU",
+    "snippet": {
+      "publishedAt": "2020-02-25T15:43:31Z",
+      "channelId": "UCCktnahuRFYIBtNnKT5IYyg",
+      "title": "How to Start Coding | Programming for Beginners | Learn Coding | Intellipaat",
+      "description": "🔥Intellipaat Python course: https://intellipaat.com/python-for-data-science-training/\n🔥Intellipaat Programming courses: https://intellipaat.com/course-cat/programming/\nIn this video you will know how one can start coding and best programming languages to learn in 2020 for Job in Google, Microsoft, Infosys, TCS etc. Also you will know the top 5 programming languages to learn in 2020 for a rewarding career.\n#HowToStartCoding #ProgrammingForBeginners #LearnCoding #Python #Php #Java #Jbpm #Angular #C #c++ #Django #Linux #WebDevelopement\n00:00 - Introduction\n00:08 - How to start coding?\n01:37 - Why Learn Coding?\n04:54 - How to Start Coding?\n09:33 - Learn Basics of that language \n10:32 - Create a Basic Application\n12:11 - Which language and tools should you use?\n20:42 - How to Choose a Project?\n24:08 - Learning path: Coding\n28:12 - What Kind of Jobs Can you Expect?\n📌 Do subscribe to Intellipaat channel & get regular updates on videos: https://www.youtube.com/user/intellipaaat?sub_confirmation=1\n\n💡 Know top 5 reasons to learn python: https://www.youtube.com/watch?v=TiFHCjJ8PQ8\n\n🔗 Watch complete Python tutorials here: https://www.youtube.com/watch?v=5GYeia8IRbg&list=PLVHgQku8Z935Qq0h3SZpSOwSrUMx1y3c9\n\n📕 Read complete Python tutorial here: https://intellipaat.com/blog/tutorial/python-tutorial/\n\n📕Read insightful blog on Python certification: https://intellipaat.com/blog/python-certification/\n\nAre you looking for something more? Enroll in our programming courses and become a certified Professional (https://intellipaat.com/all-courses/programming/). All the trainings are instructor led training provided by Intellipaat which is completely aligned with industry standards and certification bodies.\n\nIf you’ve enjoyed this how to start coding video, Like us and Subscribe to our channel for more similar informative videos and free tutorials. \nGot any questions about top programming languages? Ask us in the comment section below.\n----------------------------\nIntellipaat Edge\n \n1. 24*7 Life time Access & Support \n2. Flexible Class Schedule\n3. Job Assistance\n4. Mentors with +14 yrs \n5. Industry Oriented Course ware\n6. Life time free Course Upgrade\n------------------------------\nFor more Information:\nPlease write us to sales@intellipaat.com, or call us at: +91- 7847955955  US : 1-800-216-8930(Toll Free)\n\nWebsite: https://intellipaat.com/all-courses/programming/\n\nFacebook: https://www.facebook.com/intellipaatonline\n\nLinkedIn: https://www.linkedin.com/company/intellipaat-software-solutions\n\nTelegram: https://t.me/Learn_with_Intellipaat\n\nInstagram: https://www.instagram.com/intellipaat/\n\nTwitter: https://twitter.com/Intellipaat\n\nMeetup : https://www.meetup.com/Intellipaat/",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/HIj8wU_rGIU/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/HIj8wU_rGIU/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/HIj8wU_rGIU/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/HIj8wU_rGIU/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/HIj8wU_rGIU/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Intellipaat",
+      "tags": [
+        "how to start coding",
+        "how to learn programming",
+        "programming for beginners",
+        "learn coding",
+        "programming",
+        "how to learn python",
+        "how to learn to code",
+        "programming language",
+        "learn programming",
+        "python programming",
+        "learn to code",
+        "programming languages",
+        "top programming languages",
+        "intellipaat",
+        "best programming language",
+        "how to learn programming for beginners",
+        "programming languages 2020",
+        "how to learn to code for beginners",
+        "how to learn coding"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "How to Start Coding | Programming for Beginners | Learn Coding | Intellipaat",
+        "description": "🔥Intellipaat Python course: https://intellipaat.com/python-for-data-science-training/\n🔥Intellipaat Programming courses: https://intellipaat.com/course-cat/programming/\nIn this video you will know how one can start coding and best programming languages to learn in 2020 for Job in Google, Microsoft, Infosys, TCS etc. Also you will know the top 5 programming languages to learn in 2020 for a rewarding career.\n#HowToStartCoding #ProgrammingForBeginners #LearnCoding #Python #Php #Java #Jbpm #Angular #C #c++ #Django #Linux #WebDevelopement\n00:00 - Introduction\n00:08 - How to start coding?\n01:37 - Why Learn Coding?\n04:54 - How to Start Coding?\n09:33 - Learn Basics of that language \n10:32 - Create a Basic Application\n12:11 - Which language and tools should you use?\n20:42 - How to Choose a Project?\n24:08 - Learning path: Coding\n28:12 - What Kind of Jobs Can you Expect?\n📌 Do subscribe to Intellipaat channel & get regular updates on videos: https://www.youtube.com/user/intellipaaat?sub_confirmation=1\n\n💡 Know top 5 reasons to learn python: https://www.youtube.com/watch?v=TiFHCjJ8PQ8\n\n🔗 Watch complete Python tutorials here: https://www.youtube.com/watch?v=5GYeia8IRbg&list=PLVHgQku8Z935Qq0h3SZpSOwSrUMx1y3c9\n\n📕 Read complete Python tutorial here: https://intellipaat.com/blog/tutorial/python-tutorial/\n\n📕Read insightful blog on Python certification: https://intellipaat.com/blog/python-certification/\n\nAre you looking for something more? Enroll in our programming courses and become a certified Professional (https://intellipaat.com/all-courses/programming/). All the trainings are instructor led training provided by Intellipaat which is completely aligned with industry standards and certification bodies.\n\nIf you’ve enjoyed this how to start coding video, Like us and Subscribe to our channel for more similar informative videos and free tutorials. \nGot any questions about top programming languages? Ask us in the comment section below.\n----------------------------\nIntellipaat Edge\n \n1. 24*7 Life time Access & Support \n2. Flexible Class Schedule\n3. Job Assistance\n4. Mentors with +14 yrs \n5. Industry Oriented Course ware\n6. Life time free Course Upgrade\n------------------------------\nFor more Information:\nPlease write us to sales@intellipaat.com, or call us at: +91- 7847955955  US : 1-800-216-8930(Toll Free)\n\nWebsite: https://intellipaat.com/all-courses/programming/\n\nFacebook: https://www.facebook.com/intellipaatonline\n\nLinkedIn: https://www.linkedin.com/company/intellipaat-software-solutions\n\nTelegram: https://t.me/Learn_with_Intellipaat\n\nInstagram: https://www.instagram.com/intellipaat/\n\nTwitter: https://twitter.com/Intellipaat\n\nMeetup : https://www.meetup.com/Intellipaat/"
+      },
+      "defaultAudioLanguage": "en"
+    },
+    "contentDetails": {
+      "duration": "PT33M8S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": false,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "9763571",
+      "likeCount": "222367",
+      "favoriteCount": "0",
+      "commentCount": "9511"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "leEihteZS20fWRoRZD-NXseNlaw",
+    "id": "eMBB8OK50tw",
+    "snippet": {
+      "publishedAt": "2025-02-13T21:43:59Z",
+      "channelId": "UCu8ZrTE4sxpb9v40CfXxFGw",
+      "title": "Day 18 Session 2 React JS",
+      "description": "",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/eMBB8OK50tw/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/eMBB8OK50tw/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/eMBB8OK50tw/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/eMBB8OK50tw/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/eMBB8OK50tw/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Meet Patel",
+      "categoryId": "26",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "Day 18 Session 2 React JS",
+        "description": ""
+      },
+      "defaultAudioLanguage": "en-US"
+    },
+    "contentDetails": {
+      "duration": "PT49M59S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": false,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "43",
+      "likeCount": "1",
+      "favoriteCount": "0",
+      "commentCount": "0"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "HPu1DcSJ141e5fPr9_uh5NNuGUo",
+    "id": "0ZJgIjIuY7U",
+    "snippet": {
+      "publishedAt": "2020-05-09T16:00:00Z",
+      "channelId": "UCFbNIlppjAuEX4znoulh0Cw",
+      "title": "Learn useEffect In 13 Minutes",
+      "description": "🚨 IMPORTANT:\n\nFull React Course: https://courses.webdevsimplified.com/learn-react-today\n1 Year Free Hosting: https://www.atlantic.net/webdevsimplified\nUse code KYLE for an additional $50\n\nIn this video I cover everything you need to know about the useEffect hook. I compare this hook to the old way of doing things with lifecycle methods in class components so you can understand how to start using hooks effectively in your projects. This is part of a series of React videos where I cover all the important hooks in React.\n\n\n📚 Materials/References:\n\nuseState Video: https://youtu.be/O6P86uwfdR0\nuseEffect Blog Article: https://blog.webdevsimplified.com/2020-04/use-effect/\nReact Hooks Playlist: https://www.youtube.com/playlist?list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h\n\n\n🧠 Concepts Covered:\n\n- How to use hooks in React\n- How to convert class lifecycle methods to function effects with useEffect\n- How to use the useEffect hook\n\n\n🌎 Find Me Here:\n\nMy Blog: https://blog.webdevsimplified.com\nMy Courses: https://courses.webdevsimplified.com\nPatreon: https://www.patreon.com/WebDevSimplified\nTwitter: https://twitter.com/DevSimplified\nDiscord: https://discord.gg/7StTjnR\nGitHub: https://github.com/WebDevSimplified\nCodePen: https://codepen.io/WebDevSimplified\n\n\n#ReactJs #WDS #useEffect",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/0ZJgIjIuY7U/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/0ZJgIjIuY7U/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/0ZJgIjIuY7U/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/0ZJgIjIuY7U/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/0ZJgIjIuY7U/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Web Dev Simplified",
+      "tags": [
+        "webdevsimplified",
+        "react hooks",
+        "react tutorial",
+        "react js tutorial",
+        "react hooks tutorial",
+        "react hooks project",
+        "learn react hooks",
+        "learn react js",
+        "learn usestate in 15 minutes",
+        "react beginner",
+        "useEffect",
+        "react useEffect",
+        "react js useEffect",
+        "useeffect hook",
+        "react useeffect hook",
+        "useeffect tutorial",
+        "reactjs useeffect",
+        "react js useEffect tutorial",
+        "use effect react js",
+        "learn react useEffect",
+        "react lifecycle method",
+        "learn useeffect in 13 minutes",
+        "react useeffect js",
+        "javascript",
+        "js"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "Learn useEffect In 13 Minutes",
+        "description": "🚨 IMPORTANT:\n\nFull React Course: https://courses.webdevsimplified.com/learn-react-today\n1 Year Free Hosting: https://www.atlantic.net/webdevsimplified\nUse code KYLE for an additional $50\n\nIn this video I cover everything you need to know about the useEffect hook. I compare this hook to the old way of doing things with lifecycle methods in class components so you can understand how to start using hooks effectively in your projects. This is part of a series of React videos where I cover all the important hooks in React.\n\n\n📚 Materials/References:\n\nuseState Video: https://youtu.be/O6P86uwfdR0\nuseEffect Blog Article: https://blog.webdevsimplified.com/2020-04/use-effect/\nReact Hooks Playlist: https://www.youtube.com/playlist?list=PLZlA0Gpn_vH8EtggFGERCwMY5u5hOjf-h\n\n\n🧠 Concepts Covered:\n\n- How to use hooks in React\n- How to convert class lifecycle methods to function effects with useEffect\n- How to use the useEffect hook\n\n\n🌎 Find Me Here:\n\nMy Blog: https://blog.webdevsimplified.com\nMy Courses: https://courses.webdevsimplified.com\nPatreon: https://www.patreon.com/WebDevSimplified\nTwitter: https://twitter.com/DevSimplified\nDiscord: https://discord.gg/7StTjnR\nGitHub: https://github.com/WebDevSimplified\nCodePen: https://codepen.io/WebDevSimplified\n\n\n#ReactJs #WDS #useEffect"
+      },
+      "defaultAudioLanguage": "en-US"
+    },
+    "contentDetails": {
+      "duration": "PT13M38S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": true,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "865413",
+      "likeCount": "25226",
+      "favoriteCount": "0",
+      "commentCount": "784"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "U0qYFvBv7T2OhMOqNMAL6qy7auM",
+    "id": "b6VnWy-jjAM",
+    "snippet": {
+      "publishedAt": "2025-02-19T12:30:38Z",
+      "channelId": "UCHfgE543QovDd7PXsm4Pqxw",
+      "title": "Shopping Cart UI Design in React.js | React Tutorial for Beginners",
+      "description": "Welcome to my Coding Channel!\nIn this channel, we explore various programming languages, coding tips, tutorials, and much more to help you become a better coder. Whether you’re a beginner or an advanced developer, there’s something here for everyone. Make sure to subscribe, hit the bell icon for updates, and check out the resources below!\nShopping Cart UI Design in React.js | React Tutorial for Beginners\n🔹 Code and Tutorials\nAll the code examples and tutorials are available on my website:\n👉 https://samwithcode.in/\n\n🔹 Related Videos\nFor more tutorials, check out the following videos:\n🔹 https://www.youtube.com/watch?v=2cCJ6tf8b1c&t=1101s\n🔹 https://www.youtube.com/watch?v=p8FqlDWpfyA\n🔹 https://www.youtube.com/watch?v=9RaLqJSFk34\n\n🔹 Resources Used in This Video:\n📚 [Official Docs / Guide / Resource 1]\n📚 [Official Docs / Guide / Resource 2]\n\n🔹 Follow Me\n🌐 https://samwithcode.in/\n https://www.instagram.com/samwith_code/?igshid=OGQ5ZDc2ODk2ZA%3D%3D\n\n🔹 Support the Channel\nIf you like the content, don’t forget to give it a thumbs up, leave a comment, and share with others who might find it helpful! Your support means a lot.\n\nWeb Development Project Playlist in Hindi link \nhttps://youtube.com/playlist?list=PLxvGn02TnG1v6Bi2nYWqZvQP0QHpn62o9&si=D5khgfT5OPUmh4Tu\n\n\nPython Tutorials for Absolute Beginners in Hindi\nhttps://youtube.com/playlist?list=PLxvGn02TnG1uH2C6DHmJNKq1DzgBt3z88&si=btheQmDYii-9vKvT\n\n\nSocial Media Link here\nInstagram -   https://www.instagram.com/samwith_code/?igshid=OGQ5ZDc2ODk2ZA%3D%3D",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/b6VnWy-jjAM/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/b6VnWy-jjAM/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/b6VnWy-jjAM/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/b6VnWy-jjAM/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/b6VnWy-jjAM/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "samwithcode",
+      "tags": [
+        "SamwithCode",
+        "samwithcode",
+        "hindi",
+        "Coding",
+        "Programing",
+        "code with harry",
+        "ecommerce website design",
+        "javascript tutorial",
+        "react js",
+        "learn reactjs",
+        "react.js",
+        "reactjs beginner tutorial",
+        "reactjs",
+        "react js tutorial",
+        "frontend",
+        "classbase componenet",
+        "react js shoping cart",
+        "react native",
+        "javascript",
+        "redux",
+        "react tutorial for beginners",
+        "react class based component",
+        "react classbase componenet",
+        "react project",
+        "web development",
+        "react 19 features",
+        "react chat app"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "Shopping Cart UI Design in React.js | React Tutorial for Beginners",
+        "description": "Welcome to my Coding Channel!\nIn this channel, we explore various programming languages, coding tips, tutorials, and much more to help you become a better coder. Whether you’re a beginner or an advanced developer, there’s something here for everyone. Make sure to subscribe, hit the bell icon for updates, and check out the resources below!\nShopping Cart UI Design in React.js | React Tutorial for Beginners\n🔹 Code and Tutorials\nAll the code examples and tutorials are available on my website:\n👉 https://samwithcode.in/\n\n🔹 Related Videos\nFor more tutorials, check out the following videos:\n🔹 https://www.youtube.com/watch?v=2cCJ6tf8b1c&t=1101s\n🔹 https://www.youtube.com/watch?v=p8FqlDWpfyA\n🔹 https://www.youtube.com/watch?v=9RaLqJSFk34\n\n🔹 Resources Used in This Video:\n📚 [Official Docs / Guide / Resource 1]\n📚 [Official Docs / Guide / Resource 2]\n\n🔹 Follow Me\n🌐 https://samwithcode.in/\n https://www.instagram.com/samwith_code/?igshid=OGQ5ZDc2ODk2ZA%3D%3D\n\n🔹 Support the Channel\nIf you like the content, don’t forget to give it a thumbs up, leave a comment, and share with others who might find it helpful! Your support means a lot.\n\nWeb Development Project Playlist in Hindi link \nhttps://youtube.com/playlist?list=PLxvGn02TnG1v6Bi2nYWqZvQP0QHpn62o9&si=D5khgfT5OPUmh4Tu\n\n\nPython Tutorials for Absolute Beginners in Hindi\nhttps://youtube.com/playlist?list=PLxvGn02TnG1uH2C6DHmJNKq1DzgBt3z88&si=btheQmDYii-9vKvT\n\n\nSocial Media Link here\nInstagram -   https://www.instagram.com/samwith_code/?igshid=OGQ5ZDc2ODk2ZA%3D%3D"
+      },
+      "defaultAudioLanguage": "hi"
+    },
+    "contentDetails": {
+      "duration": "PT19M46S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": false,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "23",
+      "likeCount": "2",
+      "favoriteCount": "0",
+      "commentCount": "0"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "_SmutHTDHOVW9RI37nBfoBg2lMs",
+    "id": "2CJglIAkHc0",
+    "snippet": {
+      "publishedAt": "2025-02-22T11:32:42Z",
+      "channelId": "UC1nrlkYcj3hI8XnQgz8aK_g",
+      "title": "Introduction to Webhooks, API Calls, and Practical Demo Integration",
+      "description": "#Webhooks #APIIntegration #WebDevelopment #codersarts #makedotcom \n\nWant to learn how to integrate webhooks and make effective API calls? In this video, we provide a beginner-friendly introduction to webhooks, explaining what they are and how they function. We’ll walk you through real-world scenarios, demonstrate practical integration techniques, and showcase the step-by-step process of connecting a webhook to your application. Whether you’re new to APIs or looking to expand your integration skills, this video is packed with insights and actionable examples to help you get started. Don’t forget to subscribe for more web development tutorials and integration demos!\n\n📲Follow us on our Social Media Handles : \n=================================\n🔗 Main Website: https://www.codersarts.com/\n📚 Codersarts Training: https://www.training.codersarts.com/\n🤖 Codersarts AI: https://www.ai.codersarts.com/\n📷 Instagram: https://www.instagram.com/codersarts/?hl=en\n📘 Facebook: https://www.facebook.com/codersarts2017\n💼 LinkedIn: https://in.linkedin.com/company/codersarts\n\n#Codersarts #AI #ML #Upskilling  #POCs #MVPs \n\n\nWebhook integration, How to use webhooks, Webhook vs API call, Practical webhook example, API integration tutorial, Webhook tutorial for beginners, Understanding API calls, API integration demo, Real-world webhook integration, Beginner-friendly API guide",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/2CJglIAkHc0/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/2CJglIAkHc0/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/2CJglIAkHc0/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/2CJglIAkHc0/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/2CJglIAkHc0/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "CodersArts",
+      "tags": [
+        "Codersarts",
+        "ai assignment help",
+        "ml assignment help",
+        "machine learning homework",
+        "deep learning assignments",
+        "ai project help",
+        "tensorflow assignment help",
+        "pytorch assignment help",
+        "programming coursework help",
+        "data science coursework help",
+        "build a poc",
+        "mvp development services",
+        "ML live project training",
+        "codersarts training",
+        "Codersarts AI",
+        "coding help",
+        "ml upskilling",
+        "tech career boost",
+        "online coursework help",
+        "ML live project experience",
+        "hands-on AI project training",
+        "AI upskilling"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "Introduction to Webhooks, API Calls, and Practical Demo Integration",
+        "description": "#Webhooks #APIIntegration #WebDevelopment #codersarts #makedotcom \n\nWant to learn how to integrate webhooks and make effective API calls? In this video, we provide a beginner-friendly introduction to webhooks, explaining what they are and how they function. We’ll walk you through real-world scenarios, demonstrate practical integration techniques, and showcase the step-by-step process of connecting a webhook to your application. Whether you’re new to APIs or looking to expand your integration skills, this video is packed with insights and actionable examples to help you get started. Don’t forget to subscribe for more web development tutorials and integration demos!\n\n📲Follow us on our Social Media Handles : \n=================================\n🔗 Main Website: https://www.codersarts.com/\n📚 Codersarts Training: https://www.training.codersarts.com/\n🤖 Codersarts AI: https://www.ai.codersarts.com/\n📷 Instagram: https://www.instagram.com/codersarts/?hl=en\n📘 Facebook: https://www.facebook.com/codersarts2017\n💼 LinkedIn: https://in.linkedin.com/company/codersarts\n\n#Codersarts #AI #ML #Upskilling  #POCs #MVPs \n\n\nWebhook integration, How to use webhooks, Webhook vs API call, Practical webhook example, API integration tutorial, Webhook tutorial for beginners, Understanding API calls, API integration demo, Real-world webhook integration, Beginner-friendly API guide"
+      },
+      "defaultAudioLanguage": "en-IN"
+    },
+    "contentDetails": {
+      "duration": "PT20M5S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": true,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "44",
+      "likeCount": "1",
+      "favoriteCount": "0",
+      "commentCount": "0"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "ob5huPPt6D_qSjgpSCpD1UqBvf8",
+    "id": "ekO7S3hu8gM",
+    "snippet": {
+      "publishedAt": "2025-02-12T04:28:18Z",
+      "channelId": "UC4dFykwm8cwDh9M_lEJIphA",
+      "title": "SLEEP With GOD'S PROMISES | 100 Psalms, Prayers & Bible Verses for Abundance, Healing, & Strength",
+      "description": "Join us as we dive into 100 powerful Bible verses from the Book of Psalms and challenge ourselves to uncover God's promises for abundance, healing, and strength.\n\nWe're constantly bombarded with messages that tell us we're not enough, we don't have enough, and we'll never be enough. But the Bible reveals a different truth-one that speaks directly to the heart of our deepest fears and desires. The Psalms are filled with God's powerful promises, offering hope, restoration, and divine strength.\n\nAt times, we struggle with doubt and wonder if God is really listening. The Bible reassures us that He is always near, and the Psalms reveal His faithfulness in every season of life. Whether we're facing financial hardships, battling illness, or searching for meaning, God's promises in the Bible remain unshakable. The Psalms remind us that His love never fails, and His plans for us are greater than we can imagine.\n\nThe Book of Psalms is a source of divine comfort and wisdom. Psalm 23 declares that God is our Shepherd, leading us beside still waters and restoring our souls. Psalm 27 reminds us that He is our light and salvation, giving us courage in times of trouble. Psalm 84 assures us that God blesses those who trust in Him, strengthening them for the journey ahead. Throughout the Bible, and especially in the Psalms, we see how God redeems, protects, and uplifts His people.\n\nOne of the most powerful Psalms, Psalm 138, declares that God's love endures forever and that He is working all things together for our good. This unshakable promise gives us hope and strength, even in our darkest moments.\n\nThe Bible is filled with life-changing truths, and the Psalms serve as a testimony to God's unwavering love. Today, I want you to know that these promises are for you-promises of abundance, healing, and strength. They're not just ancient words; they are living, breathing truths that can transform your life. Let these Bible verses from the Psalms remind you that no matter what you face, God is always working for your good.\n\nTimestamps:\n\n00:03 - Psalm 46:1\n01:26 - Psalm 139:14\n02:54 - Psalm 103:5\n04:10 - Psalm 34:1\n05:23 - Psalm 136:1\n06:35 - Psalm 27:4\n07:52 - Psalm 51:11\n09:04 - Psalm 63:1\n10:14 - Psalm 16:11\n11:37 - Psalm 119:105\n12:50 - Psalm 59:1\n14:07 - Psalm 17:8\n15:13 - Psalm 29:11\n16:24 - Psalm 51:12\n17:30 - Psalm 25:5\n18:36 - Psalm 1:2\n20:02 - Psalm 46:10\n21:10 - Psalm 139:23\n22:19 - Psalm 37:5\n23:32 - Psalm 119:33\n24:28 - Psalm 27:14\n25:48 - Psalm 91:2\n26:46 - Psalm 119:18\n27:51 - Psalm 5:12\n29:02 - Psalm 23:2-3\n30:22 - Psalm 121:7\n31:25 - Psalm 51:10\n32:28 - Psalm 27:4\n33:32 - Psalm 71:8\n34:33 - Psalm 34:4\n35:37 - Psalm 119:105\n36:40 - Psalm 16:11\n37:42 - Psalm 86:11\n38:44 - Psalm 18:2\n40:02 - Psalm 37:7\n41:03 - Psalm 23:3\n42:08 - Psalm 91:3\n43:05 - Psalm 51:12\n44:05 - Psalm 86:11\n45:10 - Psalm 67:1\n46:05 - Psalm 4:1\n47:04 - Psalm 35\n48:05 - Psalm 99\n49:04 - Psalm 42\n50:18 - Psalm 29:11\n51:18 - Psalm 1:2\n52:20 - Psalm 5:12\n53:13 - Psalm 42:11\n54:15 - Psalm 72:19\n55:12 - Psalm 37:4\n56:14 - Psalm 51:10\n57:13 - Psalm 71:15\n58:13 - Psalm 119:89\n59:13 - Psalm 90:12\n1:00:14 - Psalm 23:6\n1:01:14 - Psalm 176\n1:02:14 - Psalm 73:26\n1:03:07 - Psalm 103:2\n1:04:04 - Psalm 34:4\n1:05:12 - Psalm 125:1\n1:06:09 - Psalm 51:12\n1:07:10 - Psalm 119:133\n1:08:04 - Psalm 59:1\n1:08:58 - Psalm 90:17\n1:09:56 - Psalm 34:14\n1:10:53 - Psalm 3:5\n1:11:53 - Psalm 4:7\n1:12:45 - Psalm 95:6\n1:13:48 - Psalm 103:12\n1:14:36 - Psalm 23.1\n1:15:33 - Psalm 103:1-2\n1:16:35 - Psalm 23:3\n1:17:31 - Psalm 71:5\n1:18:24 - Psalm 86:15\n1:19:34 - Psalm 27:14\n1:20:31 - Psalm 44:5\n1:21:27 - Psalm 51:12\n1:22:26 - Psalm 86:11\n1:23:26 - Psalm 29:11\n1:24:21 = Psalm 34:4\n1:25:18 - Psalm 46:10\n1:26:10 - Psalm 27:14\n1:27:07 - Psalm 66:16\n1:28:05 - Psalm 51:10\n1:29:02 - Psalm 119:105\n1:29:59 - Psalm 41*\n1:31:13 - Psalm 91:11\n1:32:12 - Psalm 34:1\n1:33:11 - Psalm 51:12\n1:34:09 - Psalm 13:5\n1:35:04 - Psalm 25:5\n1:36:06 - Psalm 40:10\n1:37:08 - Psalm 34:4\n1:38:05 - Psalm 141:9\n1:38:59 - Psalm 23:3\n1:39:47 - Psalm 27:14\n1:40:45 - Psalm 119:133\n1:41:37 - Psalm 34:14\n1:42:38 - Psalm 115:1\n1:43:35 - Psalm 118:24\n\n#Bible #GodsPromises #Psalms",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/ekO7S3hu8gM/default_live.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/ekO7S3hu8gM/mqdefault_live.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/ekO7S3hu8gM/hqdefault_live.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/ekO7S3hu8gM/sddefault_live.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/ekO7S3hu8gM/maxresdefault_live.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Ai Bible Testament",
+      "tags": [
+        "Ai Bible Testament",
+        "Bible",
+        "Bible prophesy",
+        "Bible recap",
+        "Christianity",
+        "Daily devotional",
+        "Daily jesus devotional",
+        "Jesus",
+        "King David",
+        "Old Testament",
+        "Psalms",
+        "Spiritual Growth",
+        "The Book of Psalms",
+        "Verse of the day",
+        "Worship",
+        "ai bible study",
+        "bible study",
+        "bible verses",
+        "bible verses for sleep",
+        "biblical wisdom",
+        "daily devotional",
+        "divine guidance",
+        "godly wisdom",
+        "heavenly insights",
+        "heavenly wisdom",
+        "jesus christ",
+        "old testament wisdom",
+        "prophetic insights",
+        "prophetic wisdom",
+        "psalms for sleep"
+      ],
+      "categoryId": "24",
+      "liveBroadcastContent": "live",
+      "localized": {
+        "title": "SLEEP With GOD'S PROMISES | 100 Psalms, Prayers & Bible Verses for Abundance, Healing, & Strength",
+        "description": "Join us as we dive into 100 powerful Bible verses from the Book of Psalms and challenge ourselves to uncover God's promises for abundance, healing, and strength.\n\nWe're constantly bombarded with messages that tell us we're not enough, we don't have enough, and we'll never be enough. But the Bible reveals a different truth-one that speaks directly to the heart of our deepest fears and desires. The Psalms are filled with God's powerful promises, offering hope, restoration, and divine strength.\n\nAt times, we struggle with doubt and wonder if God is really listening. The Bible reassures us that He is always near, and the Psalms reveal His faithfulness in every season of life. Whether we're facing financial hardships, battling illness, or searching for meaning, God's promises in the Bible remain unshakable. The Psalms remind us that His love never fails, and His plans for us are greater than we can imagine.\n\nThe Book of Psalms is a source of divine comfort and wisdom. Psalm 23 declares that God is our Shepherd, leading us beside still waters and restoring our souls. Psalm 27 reminds us that He is our light and salvation, giving us courage in times of trouble. Psalm 84 assures us that God blesses those who trust in Him, strengthening them for the journey ahead. Throughout the Bible, and especially in the Psalms, we see how God redeems, protects, and uplifts His people.\n\nOne of the most powerful Psalms, Psalm 138, declares that God's love endures forever and that He is working all things together for our good. This unshakable promise gives us hope and strength, even in our darkest moments.\n\nThe Bible is filled with life-changing truths, and the Psalms serve as a testimony to God's unwavering love. Today, I want you to know that these promises are for you-promises of abundance, healing, and strength. They're not just ancient words; they are living, breathing truths that can transform your life. Let these Bible verses from the Psalms remind you that no matter what you face, God is always working for your good.\n\nTimestamps:\n\n00:03 - Psalm 46:1\n01:26 - Psalm 139:14\n02:54 - Psalm 103:5\n04:10 - Psalm 34:1\n05:23 - Psalm 136:1\n06:35 - Psalm 27:4\n07:52 - Psalm 51:11\n09:04 - Psalm 63:1\n10:14 - Psalm 16:11\n11:37 - Psalm 119:105\n12:50 - Psalm 59:1\n14:07 - Psalm 17:8\n15:13 - Psalm 29:11\n16:24 - Psalm 51:12\n17:30 - Psalm 25:5\n18:36 - Psalm 1:2\n20:02 - Psalm 46:10\n21:10 - Psalm 139:23\n22:19 - Psalm 37:5\n23:32 - Psalm 119:33\n24:28 - Psalm 27:14\n25:48 - Psalm 91:2\n26:46 - Psalm 119:18\n27:51 - Psalm 5:12\n29:02 - Psalm 23:2-3\n30:22 - Psalm 121:7\n31:25 - Psalm 51:10\n32:28 - Psalm 27:4\n33:32 - Psalm 71:8\n34:33 - Psalm 34:4\n35:37 - Psalm 119:105\n36:40 - Psalm 16:11\n37:42 - Psalm 86:11\n38:44 - Psalm 18:2\n40:02 - Psalm 37:7\n41:03 - Psalm 23:3\n42:08 - Psalm 91:3\n43:05 - Psalm 51:12\n44:05 - Psalm 86:11\n45:10 - Psalm 67:1\n46:05 - Psalm 4:1\n47:04 - Psalm 35\n48:05 - Psalm 99\n49:04 - Psalm 42\n50:18 - Psalm 29:11\n51:18 - Psalm 1:2\n52:20 - Psalm 5:12\n53:13 - Psalm 42:11\n54:15 - Psalm 72:19\n55:12 - Psalm 37:4\n56:14 - Psalm 51:10\n57:13 - Psalm 71:15\n58:13 - Psalm 119:89\n59:13 - Psalm 90:12\n1:00:14 - Psalm 23:6\n1:01:14 - Psalm 176\n1:02:14 - Psalm 73:26\n1:03:07 - Psalm 103:2\n1:04:04 - Psalm 34:4\n1:05:12 - Psalm 125:1\n1:06:09 - Psalm 51:12\n1:07:10 - Psalm 119:133\n1:08:04 - Psalm 59:1\n1:08:58 - Psalm 90:17\n1:09:56 - Psalm 34:14\n1:10:53 - Psalm 3:5\n1:11:53 - Psalm 4:7\n1:12:45 - Psalm 95:6\n1:13:48 - Psalm 103:12\n1:14:36 - Psalm 23.1\n1:15:33 - Psalm 103:1-2\n1:16:35 - Psalm 23:3\n1:17:31 - Psalm 71:5\n1:18:24 - Psalm 86:15\n1:19:34 - Psalm 27:14\n1:20:31 - Psalm 44:5\n1:21:27 - Psalm 51:12\n1:22:26 - Psalm 86:11\n1:23:26 - Psalm 29:11\n1:24:21 = Psalm 34:4\n1:25:18 - Psalm 46:10\n1:26:10 - Psalm 27:14\n1:27:07 - Psalm 66:16\n1:28:05 - Psalm 51:10\n1:29:02 - Psalm 119:105\n1:29:59 - Psalm 41*\n1:31:13 - Psalm 91:11\n1:32:12 - Psalm 34:1\n1:33:11 - Psalm 51:12\n1:34:09 - Psalm 13:5\n1:35:04 - Psalm 25:5\n1:36:06 - Psalm 40:10\n1:37:08 - Psalm 34:4\n1:38:05 - Psalm 141:9\n1:38:59 - Psalm 23:3\n1:39:47 - Psalm 27:14\n1:40:45 - Psalm 119:133\n1:41:37 - Psalm 34:14\n1:42:38 - Psalm 115:1\n1:43:35 - Psalm 118:24\n\n#Bible #GodsPromises #Psalms"
+      },
+      "defaultAudioLanguage": "en-US"
+    },
+    "contentDetails": {
+      "duration": "P0D",
+      "dimension": "2d",
+      "definition": "sd",
+      "caption": "false",
+      "licensedContent": false,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "161014",
+      "likeCount": "793",
+      "favoriteCount": "0",
+      "commentCount": "0"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "nLR3lX8em4_-0B6mDf0pOmqheec",
+    "id": "TNhaISOUy6Q",
+    "snippet": {
+      "publishedAt": "2021-01-18T18:20:26Z",
+      "channelId": "UCsBjURrPoezykLs9EqgamOA",
+      "title": "10 React Hooks Explained // Plus Build your own from Scratch",
+      "description": "React hooks provide a highly-efficient was to tap into framework features and organize reactive logic. Learn how use every built-in React hook https://fireship.io/courses/react-next-firebase/\n\n00:00 Why React Hooks?\n02:20 useState\n03:50 useEffect\n05:55 useContext\n06:58 useRef\n07:58 useReducer\n09:27 useMemo\n10:12 useCallback\n10:40 useImperativeHandle\n11:18 useLayoutEffect\n11:43 useDebugValue & Custom Hooks\n\n#webdev #js #react\n\nInstall the quiz app 🤓\n\niOS https://itunes.apple.com/us/app/fireship/id1462592372?mt=8\nAndroid https://play.google.com/store/apps/details?id=io.fireship.quizapp\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\nMy VS Code Theme\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/TNhaISOUy6Q/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/TNhaISOUy6Q/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/TNhaISOUy6Q/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/TNhaISOUy6Q/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/TNhaISOUy6Q/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Fireship",
+      "tags": [
+        "webdev",
+        "app development",
+        "lesson",
+        "tutorial",
+        "react",
+        "reactjs",
+        "js",
+        "react hooks",
+        "react tutorial",
+        "react hooks tutorial"
+      ],
+      "categoryId": "28",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "10 React Hooks Explained // Plus Build your own from Scratch",
+        "description": "React hooks provide a highly-efficient was to tap into framework features and organize reactive logic. Learn how use every built-in React hook https://fireship.io/courses/react-next-firebase/\n\n00:00 Why React Hooks?\n02:20 useState\n03:50 useEffect\n05:55 useContext\n06:58 useRef\n07:58 useReducer\n09:27 useMemo\n10:12 useCallback\n10:40 useImperativeHandle\n11:18 useLayoutEffect\n11:43 useDebugValue & Custom Hooks\n\n#webdev #js #react\n\nInstall the quiz app 🤓\n\niOS https://itunes.apple.com/us/app/fireship/id1462592372?mt=8\nAndroid https://play.google.com/store/apps/details?id=io.fireship.quizapp\n\nUpgrade to Fireship PRO at https://fireship.io/pro\nUse code lORhwXd2 for 25% off your first payment. \n\nMy VS Code Theme\n\n- Atom One Dark \n- vscode-icons\n- Fira Code Font"
+      },
+      "defaultAudioLanguage": "en"
+    },
+    "contentDetails": {
+      "duration": "PT13M15S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": true,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "1481480",
+      "likeCount": "54712",
+      "favoriteCount": "0",
+      "commentCount": "865"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "4ohW2ySPWVvFLY6YmZzwMjNe7Wg",
+    "id": "ZeNyjnneq_w",
+    "snippet": {
+      "publishedAt": "2022-05-07T16:00:14Z",
+      "channelId": "UCFbNIlppjAuEX4znoulh0Cw",
+      "title": "How To Create The YouTube Video Player",
+      "description": "JavaScript Simplified Course: https://javascriptsimplified.com\n\nYouTube has one of the best video players out there and in this video I will show you how to clone the entire video player. This includes everything from simple stuff like full screen and theater mode to complex features like picture in picture and timeline scrubbing.\n\n\n📚 Materials/References:\n\nGitHub Code: https://github.com/WebDevSimplified/youtube-video-player-clone\nJavaScript Simplified Course: https://javascriptsimplified.com\n\n\n🌎 Find Me Here:\n\nMy Blog: https://blog.webdevsimplified.com\nMy Courses: https://courses.webdevsimplified.com\nPatreon: https://www.patreon.com/WebDevSimplified\nTwitter: https://twitter.com/DevSimplified\nDiscord: https://discord.gg/7StTjnR\nGitHub: https://github.com/WebDevSimplified\nCodePen: https://codepen.io/WebDevSimplified\n\n\n⏱️ Timestamps:\n\n00:00:00 - Introduction\n00:00:30 - Setup/Demo\n00:03:09 - Video player HTML/CSS\n00:06:29 - Play/pause HTML/CSS\n00:14:31 - Play/pause JavaScript\n00:20:20 - Video controls HTML/CSS\n00:22:04 - Fullscreen, theater, and mini player HTML/CSS\n00:26:42 - Fullscreen, theater, and mini player JavaScript\n00:36:13 - Volume controls HTML/CSS\n00:41:59 - Volume controls JavaScript\n00:46:04 - Duration HTML/CSS\n00:47:14 - Duration JavaScript\n00:52:50 - Closed captions HTML/CSS\n00:54:37 - Closed captions JavaScript\n00:56:45 - Playback speed HTML/CSS\n00:58:10 - Playback speed JavaScript\n01:01:14 - Timeline HTML/CSS\n01:11:04 - Timeline JavaScript\n\n\n#VideoPlayer #WDS #JavaScript",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/ZeNyjnneq_w/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/ZeNyjnneq_w/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/ZeNyjnneq_w/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/ZeNyjnneq_w/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/ZeNyjnneq_w/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Web Dev Simplified",
+      "tags": [
+        "webdevsimplified",
+        "youtube video player",
+        "js video player",
+        "youtube video player clone",
+        "js video player clone",
+        "javascript video player",
+        "js video",
+        "javascript video",
+        "video player html",
+        "html css js video",
+        "html css javascript video",
+        "html css js video player",
+        "video player controls js",
+        "video player controls css js",
+        "video player controls javascript"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "How To Create The YouTube Video Player",
+        "description": "JavaScript Simplified Course: https://javascriptsimplified.com\n\nYouTube has one of the best video players out there and in this video I will show you how to clone the entire video player. This includes everything from simple stuff like full screen and theater mode to complex features like picture in picture and timeline scrubbing.\n\n\n📚 Materials/References:\n\nGitHub Code: https://github.com/WebDevSimplified/youtube-video-player-clone\nJavaScript Simplified Course: https://javascriptsimplified.com\n\n\n🌎 Find Me Here:\n\nMy Blog: https://blog.webdevsimplified.com\nMy Courses: https://courses.webdevsimplified.com\nPatreon: https://www.patreon.com/WebDevSimplified\nTwitter: https://twitter.com/DevSimplified\nDiscord: https://discord.gg/7StTjnR\nGitHub: https://github.com/WebDevSimplified\nCodePen: https://codepen.io/WebDevSimplified\n\n\n⏱️ Timestamps:\n\n00:00:00 - Introduction\n00:00:30 - Setup/Demo\n00:03:09 - Video player HTML/CSS\n00:06:29 - Play/pause HTML/CSS\n00:14:31 - Play/pause JavaScript\n00:20:20 - Video controls HTML/CSS\n00:22:04 - Fullscreen, theater, and mini player HTML/CSS\n00:26:42 - Fullscreen, theater, and mini player JavaScript\n00:36:13 - Volume controls HTML/CSS\n00:41:59 - Volume controls JavaScript\n00:46:04 - Duration HTML/CSS\n00:47:14 - Duration JavaScript\n00:52:50 - Closed captions HTML/CSS\n00:54:37 - Closed captions JavaScript\n00:56:45 - Playback speed HTML/CSS\n00:58:10 - Playback speed JavaScript\n01:01:14 - Timeline HTML/CSS\n01:11:04 - Timeline JavaScript\n\n\n#VideoPlayer #WDS #JavaScript"
+      },
+      "defaultAudioLanguage": "en-US"
+    },
+    "contentDetails": {
+      "duration": "PT1H23M28S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": true,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "190174",
+      "likeCount": "5342",
+      "favoriteCount": "0",
+      "commentCount": "306"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "MS4WYEzEuKbRa1VJ1ATVFJx8ee0",
+    "id": "AYBuL8FhgwA",
+    "snippet": {
+      "publishedAt": "2020-11-21T22:18:57Z",
+      "channelId": "UClalXOJc3IVxk-sYmycfABA",
+      "title": "React Audio Player - Part 1 (Slider)",
+      "description": "Live Site: https://olegsuncrown.github.io/react-audio-player/\nGitHub: https://github.com/OlegSuncrown/react-audio-player\n\nReact audio player.\nEverything is done by using react tools only",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/AYBuL8FhgwA/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/AYBuL8FhgwA/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/AYBuL8FhgwA/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/AYBuL8FhgwA/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/AYBuL8FhgwA/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Oleh Biblyi",
+      "tags": [
+        "javascript",
+        "react",
+        "audio player",
+        "slider",
+        "js",
+        "react player",
+        "css",
+        "html"
+      ],
+      "categoryId": "22",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "React Audio Player - Part 1 (Slider)",
+        "description": "Live Site: https://olegsuncrown.github.io/react-audio-player/\nGitHub: https://github.com/OlegSuncrown/react-audio-player\n\nReact audio player.\nEverything is done by using react tools only"
+      }
+    },
+    "contentDetails": {
+      "duration": "PT22M11S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "false",
+      "licensedContent": false,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "23664",
+      "likeCount": "223",
+      "favoriteCount": "0",
+      "commentCount": "4"
+    }
+  },
+  {
+    "kind": "youtube#video",
+    "etag": "V77bV3_zptZO6bp4UCWMG2eTT_Q",
+    "id": "cc_xmawJ8Kg",
+    "snippet": {
+      "publishedAt": "2024-01-16T13:00:29Z",
+      "channelId": "UCrL69sErRwEyr7_p0qVCkOQ",
+      "title": "React Hook Form - Complete Tutorial (with Zod)",
+      "description": "🚀 Project React  → https://cosden.solutions/project-react\n📥 Import React (Newsletter) → https://cosden.solutions/newsletter?s=ytd\n\nJoin The Discord! → https://discord.cosdensolutions.io\nSource Code → https://github.com/cosdensolutions/code/tree/master/videos/long/react-hook-form-tutorial\nVSCode Theme | Font → Material Theme Darker | Menlo, Monaco \"monospace\"\n\nIn this video we will learn about React Hook Form and Zod. React Hook Form is a form library in React that makes it really easy to create complex forms that scale really well. We are going to learn how to create a form with React Hook Form, how to implement our own validation and submit our data, and finally how to use Zod for validation to make it easy for us to create strong forms. Get ready, you are going to learn a lot in this React Hook Form tutorial for React.",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/cc_xmawJ8Kg/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/cc_xmawJ8Kg/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/cc_xmawJ8Kg/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/cc_xmawJ8Kg/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/cc_xmawJ8Kg/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "Cosden Solutions",
+      "tags": [
+        "react tutorial",
+        "react crash course",
+        "react developer",
+        "learn react",
+        "react hook",
+        "react hooks",
+        "react hooks tutorial",
+        "programming tutorial",
+        "react hooks explained",
+        "computer science",
+        "tutorial for beginners",
+        "react component",
+        "learn programming",
+        "web development",
+        "frontend development",
+        "coding for beginners",
+        "simple code",
+        "easy programming",
+        "react",
+        "react native",
+        "react hook form",
+        "react hook form tutorial",
+        "react hook form react",
+        "rhf",
+        "rhf react",
+        "rhf tutorial"
+      ],
+      "categoryId": "27",
+      "liveBroadcastContent": "none",
+      "localized": {
+        "title": "React Hook Form - Complete Tutorial (with Zod)",
+        "description": "🚀 Project React  → https://cosden.solutions/project-react\n📥 Import React (Newsletter) → https://cosden.solutions/newsletter?s=ytd\n\nJoin The Discord! → https://discord.cosdensolutions.io\nSource Code → https://github.com/cosdensolutions/code/tree/master/videos/long/react-hook-form-tutorial\nVSCode Theme | Font → Material Theme Darker | Menlo, Monaco \"monospace\"\n\nIn this video we will learn about React Hook Form and Zod. React Hook Form is a form library in React that makes it really easy to create complex forms that scale really well. We are going to learn how to create a form with React Hook Form, how to implement our own validation and submit our data, and finally how to use Zod for validation to make it easy for us to create strong forms. Get ready, you are going to learn a lot in this React Hook Form tutorial for React."
+      },
+      "defaultAudioLanguage": "en"
+    },
+    "contentDetails": {
+      "duration": "PT28M22S",
+      "dimension": "2d",
+      "definition": "hd",
+      "caption": "true",
+      "licensedContent": true,
+      "contentRating": {},
+      "projection": "rectangular"
+    },
+    "statistics": {
+      "viewCount": "157907",
+      "likeCount": "6079",
+      "favoriteCount": "0",
+      "commentCount": "302"
+    }
+  }
+]

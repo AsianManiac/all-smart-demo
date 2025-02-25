@@ -10,6 +10,7 @@ import { getRecommendedVideos } from "@/lib/video";
 import { RecommendedVideo } from "@/types";
 import { Calendar, Clock, Play, TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 import { useNavigate } from "react-router-dom";
 
 const FEATURED_VIDEO_IDS = [
@@ -54,43 +55,61 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="">
       {/* Hero Carousel */}
-      <Carousel className="w-full">
-        <CarouselContent>
-          {featuredShows.slice(0, 5).map((slide, index) => (
-            <CarouselItem
-              key={`${slide.id}-${index}`}
-              className="relative min-w-0"
-            >
-              <div className="relative aspect-[16/9]">
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30" />
-                <img
-                  src={slide.allThumbnails?.standard?.url}
-                  alt={slide.title}
-                  className="w-full h-full object-center"
-                />
-                <div className="absolute bottom-0 left-0 p-8 text-white">
-                  <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                    {slide.title}
-                  </h1>
-                  <p className="text-lg md:text-xl mb-6 max-w-2xl">
-                    Experience the drama and excitement of our top-rated reality
-                    shows.
-                  </p>
-                  <Button
-                    size="lg"
-                    className="gap-2"
-                    onClick={() => navigate(`/shows/${slide.id}`)}
-                  >
-                    <Play className="w-5 h-5" /> Watch Now
-                  </Button>
-                </div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mg:px-4 p-0">
+        {/* Main Content */}
+        <div className="lg:col-span-9">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {featuredShows.slice(0, 3).map((slide, index) => (
+                <CarouselItem key={`${slide.id}-${index}`} className="min-w-0">
+                  <div className="h-full aspect-video object-cover brightness-[80%]">
+                    <ReactPlayer
+                      url={`https://www.youtube.com/watch?v=${slide.id}`}
+                      width="100%"
+                      height="100%"
+                      controls
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+        </div>
+        <div className="lg:col-span-3">
+          {/* Today's Schedule */}
+          <section className="py-8 px-4 bg-muted/30">
+            <div className="container mx-auto">
+              <div className="flex items-center gap-2 mb-6">
+                <Calendar className="w-6 h-6" />
+                <h2 className="text-2xl font-bold">Today's Schedule</h2>
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+              <div className="grid grid-cols-1 gap-6">
+                {scheduleHighlights.map((item, index) => (
+                  <Card key={index} className="p-4">
+                    <div className="flex items-start gap-4">
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-5 h-5 text-muted-foreground" />
+                        <span className="text-lg font-semibold">
+                          {item.time}
+                        </span>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold">{item.show}</h3>
+                        <Badge variant="secondary">{item.type}</Badge>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+              <div className="text-center mt-6">
+                <Button variant="outline">View Full Schedule</Button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
 
       {/* Live Now Section */}
       <section className="py-8 px-4">
@@ -120,35 +139,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Today's Schedule */}
-      <section className="py-8 px-4 bg-muted/30">
-        <div className="container mx-auto">
-          <div className="flex items-center gap-2 mb-6">
-            <Calendar className="w-6 h-6" />
-            <h2 className="text-2xl font-bold">Today's Schedule</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {scheduleHighlights.map((item, index) => (
-              <Card key={index} className="p-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-muted-foreground" />
-                    <span className="text-lg font-semibold">{item.time}</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">{item.show}</h3>
-                    <Badge variant="secondary">{item.type}</Badge>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-          <div className="text-center mt-6">
-            <Button variant="outline">View Full Schedule</Button>
-          </div>
-        </div>
-      </section>
-
       {/* Popular Shows */}
       <section className="py-8 px-4">
         <div className="container mx-auto">
@@ -158,8 +148,8 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {!loading &&
-              featuredShows.slice(0, 5).map((show) => (
-                <Card key={show.id} className="overflow-hidden">
+              featuredShows.slice(0, 5).map((show, index) => (
+                <Card key={`${show.id}_${index}`} className="overflow-hidden">
                   <div className="aspect-video relative">
                     <img
                       src={show.channel.avatar || "/placeholder.svg"}
