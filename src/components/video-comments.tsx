@@ -14,7 +14,7 @@ const VideoComments: React.FC<VideoCommentsProps> = ({ comments }) => {
       <Avatar className="w-8 h-8">
         <AvatarImage src={comment.authorProfileImageUrl} alt={comment.author} />
         <AvatarFallback>
-          {comment.author.slice(1, 3).toUpperCase()}
+          {comment.author.slice(1, 2).toUpperCase()}
         </AvatarFallback>
       </Avatar>
       <div>

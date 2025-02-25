@@ -1,18 +1,14 @@
 import RecommendedVideos from "@/components/recommended-videos";
 import { getRecommendedVideos, getVideoMetadata } from "@/lib/video";
 import type { RecommendedVideo, VideoMetadata } from "@/types";
-import { useEffect, useRef, useState } from "react";
-import ReactPlayer from "react-player";
+import { useEffect, useState } from "react";
 
 export default function Shows() {
-  const [playing, setPlaying] = useState(false);
   const [videoData, setVideoData] = useState<VideoMetadata | null>(null);
   const [recommendedVideos, setRecommendedVideos] = useState<
     RecommendedVideo[]
   >([]);
-  const playerRef = useRef<ReactPlayer>(null);
   const videoUrl = "https://www.youtube.com/watch?v=NqzdVN2tyvQ";
-  // const videoUrl = "https://www.youtube.com/watch?v=iu-LBY7NXD4";
 
   const recommendedUrls = [
     "https://www.youtube.com/watch?v=Cbi9IrJYnk0",
@@ -39,12 +35,6 @@ export default function Shows() {
     };
     fetchData();
   }, [videoUrl]);
-
-  const handleTimestampClick = (seconds: number) => {
-    if (playerRef.current) {
-      playerRef.current.seekTo(seconds);
-    }
-  };
 
   if (!videoData) return null;
 

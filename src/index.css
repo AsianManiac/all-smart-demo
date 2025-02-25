@@ -65,13 +65,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
   }
-}
-
-.react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 iframe:focus-visible {
