@@ -3,6 +3,7 @@ import { formatNumber } from "@/lib/video";
 import { RecommendedVideo } from "@/types";
 import { PlayCircle } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface RecommendedVideosProps {
   videos: RecommendedVideo[];
@@ -13,7 +14,11 @@ const RecommendedVideos: React.FC<RecommendedVideosProps> = ({ videos }) => {
     <div className="space-y-4">
       <h2 className="font-semibold mb-4">Recommended Videos</h2>
       {videos.map((video) => (
-        <div key={video.id} className="flex gap-2 group cursor-pointer">
+        <Link
+          to={`/shows/${video.id}`}
+          key={video.id}
+          className="flex gap-2 group cursor-pointer"
+        >
           <div className="relative flex-shrink-0">
             <img
               src={video.thumbnail || "/placeholder.svg"}
@@ -32,17 +37,14 @@ const RecommendedVideos: React.FC<RecommendedVideosProps> = ({ videos }) => {
               {video.title}
             </h3>
             <div className="flex items-center gap-2 mt-1">
-              {/* <img
-                src={video.channel.avatar || "/placeholder.svg"}
-                alt={video.channel.name}
-                className="w-6 h-6 rounded-full"
-              /> */}
               <Avatar className="w-6 h-6">
                 <AvatarImage
                   src={video.channel.avatar}
                   alt={video.channel.name}
                 />
-                <AvatarFallback>{video.channel.name}</AvatarFallback>
+                <AvatarFallback>
+                  {video.channel.name.slice(0, 2).toUpperCase()}
+                </AvatarFallback>
               </Avatar>
               <p className="text-xs text-muted-foreground">
                 {video.channel.name}
@@ -54,7 +56,7 @@ const RecommendedVideos: React.FC<RecommendedVideosProps> = ({ videos }) => {
               <span>{video.publishedAt}</span>
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

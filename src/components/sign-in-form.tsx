@@ -78,7 +78,7 @@ const SignInForm = ({ onClose }: SignInFormProps) => {
             className="w-full bg-white text-gray-700 flex items-center justify-center"
           >
             <img
-              src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+              src="/images/google-logo.svg"
               alt="Google logo"
               className="w-6 h-6 mr-2"
             />

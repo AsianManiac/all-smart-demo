@@ -16,7 +16,7 @@ export interface VideoMetadata {
 }
 
 export interface Comment {
-  likeCount: number;
+  likeCount: string;
   textDisplay: string;
   publishedAt: any;
   authorProfileImageUrl: string;
@@ -27,12 +27,41 @@ export interface Comment {
   likes: string;
   timestamp: string;
   replies?: Comment[];
+  expanded?: boolean;
+  showReplies?: boolean;
 }
 
 export interface RecommendedVideo {
   id: string;
   title: string;
   thumbnail: string;
+  allThumbnails: {
+    default: {
+      url: string;
+      width: number;
+      height: number;
+    };
+    medium: {
+      url: string;
+      width: number;
+      height: number;
+    };
+    high: {
+      url: string;
+      width: number;
+      height: number;
+    };
+    standard: {
+      url: string;
+      width: number;
+      height: number;
+    };
+    maxres: {
+      url: string;
+      width: number;
+      height: number;
+    };
+  };
   duration: string;
   channel: {
     name: string;

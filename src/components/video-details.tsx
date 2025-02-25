@@ -37,7 +37,7 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
             const formattedTime = hours
               ? `${hours}${minutes}:${secs}`
               : `${minutes}:${secs}`;
-            return `<span class="text-green-500 ${match} font-semibold hover:underline cursor-pointer" data-timestamp="${seconds}">${
+            return `<span class="text-primary ${match} font-normal hover:underline cursor-pointer" data-timestamp="${seconds}">${
               openParen || ""
             }${formattedTime}${closeParen || ""} ${label}</span>`;
           }

@@ -1,0 +1,73 @@
+Error fetching data:
+Object { stack: "AxiosError@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:397:18\nsettle@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1235:12\nonloadend@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1566:13\nEventHandlerNonNull*dispatchXhrRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1576:7\nxhr_default<@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1533:10\ndispatchRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2008:10\n_request@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2223:33\nrequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2120:25\nforEachMethodNoData/Axios.prototype[method]@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2242:17\nwrap@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:8:15\ngetVideoMetadata@http://localhost:5174/src/lib/video.ts?t=1740406892914:17:13\nfetchData@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:57:32\nViewShow/<@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:67:5\nreact-stack-bottom-frame@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:16242:20\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\ncommitHookEffectListMount@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7767:122\ncommitHookPassiveMountEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7825:60\nreconnectPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:9297:42\ndoubleInvokeEffectsOnFiber@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11282:207\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11253:78\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\ncommitDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11290:55\nflushPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11126:45\nnode_modules/react-dom/cjs/react-dom-client.development.js/commitRootImpl/<@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11042:30\nperformWorkUntilDeadline@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:35:58\n", message: "Request failed with status code 403", name: "AxiosError", code: "ERR_BAD_REQUEST", config: {…}, request: XMLHttpRequest, response: {…}, status: 403 }
+​
+code: "ERR_BAD_REQUEST"
+​
+config: Object { timeout: 0, xsrfCookieName: "XSRF-TOKEN", xsrfHeaderName: "X-XSRF-TOKEN", … }
+​
+message: "Request failed with status code 403"
+​
+name: "AxiosError"
+​
+request: XMLHttpRequest { readyState: 4, timeout: 0, withCredentials: false, … }
+​
+response: Object { data: {…}, status: 403, statusText: "", … }
+​​
+config: Object { timeout: 0, xsrfCookieName: "XSRF-TOKEN", xsrfHeaderName: "X-XSRF-TOKEN", … }
+​​​
+adapter: Array(3) [ "xhr", "http", "fetch" ]
+​​​
+data: undefined
+​​​
+env: Object { FormData: FormData(), Blob: Blob() }
+​​​
+headers: Object { Accept: "application/json, text/plain, */*", "Content-Type": undefined }
+​​​
+maxBodyLength: -1
+​​​
+maxContentLength: -1
+​​​
+method: "get"
+​​​
+params: Object { part: "snippet,replies", videoId: "ekO7S3hu8gM", key: "AIzaSyB3pX1iPXlp87WUS1gDidt_8WSdKqsDMAU" }
+​​​
+timeout: 0
+​​​
+transformRequest: Array [ transformRequest(data, headers) ]
+​​​
+transformResponse: Array [ transformResponse(data) ]
+​​​
+transitional: Object { silentJSONParsing: true, forcedJSONParsing: true, clarifyTimeoutError: false }
+​​​
+url: "https://www.googleapis.com/youtube/v3/commentThreads"
+​​​
+validateStatus: function validateStatus(status)
+​​​
+xsrfCookieName: "XSRF-TOKEN"
+​​​
+xsrfHeaderName: "X-XSRF-TOKEN"
+​​​
+<prototype>: Object { … }
+​​
+data: Object { error: {…} }
+​​​
+error: Object { code: 403, message: 'The video identified by the <code><a href="/youtube/v3/docs/commentThreads/list#videoId">videoId</a></code> parameter has disabled comments.', errors: (1) […] }
+​​​
+<prototype>: Object { … }
+​​
+headers: Object { "content-encoding": "gzip", "content-length": "245", "content-type": "application/json; charset=UTF-8", … }
+​​
+request: XMLHttpRequest { readyState: 4, timeout: 0, withCredentials: false, … }
+​​
+status: 403
+​​
+statusText: ""
+​​
+<prototype>: Object { … }
+​
+stack: "AxiosError@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:397:18\nsettle@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1235:12\nonloadend@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1566:13\nEventHandlerNonNull*dispatchXhrRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1576:7\nxhr_default<@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:1533:10\ndispatchRequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2008:10\n_request@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2223:33\nrequest@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2120:25\nforEachMethodNoData/Axios.prototype[method]@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:2242:17\nwrap@http://localhost:5174/node_modules/.vite/deps/axios.js?v=0daca715:8:15\ngetVideoMetadata@http://localhost:5174/src/lib/video.ts?t=1740406892914:17:13\nfetchData@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:57:32\nViewShow/<@http://localhost:5174/src/Pages/shows/view-show.tsx?t=1740470534538:67:5\nreact-stack-bottom-frame@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:16242:20\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\ncommitHookEffectListMount@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7767:122\ncommitHookPassiveMountEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:7825:60\nreconnectPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:9297:42\ndoubleInvokeEffectsOnFiber@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11282:207\nrunWithFiberInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:726:18\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11253:78\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\nrecursivelyTraverseAndDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11259:17\ncommitDoubleInvokeEffectsInDEV@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11290:55\nflushPassiveEffects@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11126:45\nnode_modules/react-dom/cjs/react-dom-client.development.js/commitRootImpl/<@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:11042:30\nperformWorkUntilDeadline@http://localhost:5174/node_modules/.vite/deps/react-dom_client.js?v=0daca715:35:58\n"
+​
+status: 403
+​
+<prototype>: Object { constructor: AxiosError(message, code, config, request, response), toJSON: toJSON(), stack: "", … }
+view-show.tsx:49:16

@@ -57,7 +57,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <p>&copy; 2023 Reality TV. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} AllSmartAllStar TV. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>

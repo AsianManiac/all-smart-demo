@@ -92,6 +92,7 @@ export async function getRecommendedVideos(
       id: item.id,
       title: item.snippet.title,
       thumbnail: item.snippet.thumbnails.medium.url,
+      allThumbnails: item.snippet.thumbnails,
       duration: formatDuration(item.contentDetails.duration),
       channel: {
         name: item.snippet.channelTitle,

@@ -1,14 +1,12 @@
 import RecommendedVideos from "@/components/recommended-videos";
-import { getRecommendedVideos, getVideoMetadata } from "@/lib/video";
-import type { RecommendedVideo, VideoMetadata } from "@/types";
+import { getRecommendedVideos } from "@/lib/video";
+import type { RecommendedVideo } from "@/types";
 import { useEffect, useState } from "react";
 
 export default function Shows() {
-  const [videoData, setVideoData] = useState<VideoMetadata | null>(null);
   const [recommendedVideos, setRecommendedVideos] = useState<
     RecommendedVideo[]
   >([]);
-  const videoUrl = "https://www.youtube.com/watch?v=NqzdVN2tyvQ";
 
   const recommendedUrls = [
     "https://www.youtube.com/watch?v=Cbi9IrJYnk0",
@@ -28,15 +26,13 @@ export default function Shows() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const metadata = await getVideoMetadata(videoUrl);
       const recommended = await getRecommendedVideos(recommendedUrls);
-      setVideoData(metadata);
       setRecommendedVideos(recommended);
     };
     fetchData();
-  }, [videoUrl]);
+  }, []);
 
-  if (!videoData) return null;
+  if (!recommendedVideos) return null;
 
   return (
     <div className="min-h-screen bg-background">
