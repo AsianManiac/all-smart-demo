@@ -2,16 +2,23 @@ import RecommendedVideos from "@/components/recommended-videos";
 import { Skeleton } from "@/components/ui/skeleton";
 import VideoComments from "@/components/video-comments";
 import VideoDetails from "@/components/video-details";
-import { getRecommendedVideos, getVideoMetadata } from "@/lib/video";
-import type { RecommendedVideo, VideoMetadata } from "@/types";
+import {
+  getChannelVideos,
+  getRecommendedVideos,
+  getVideoMetadata,
+} from "@/lib/video";
+import type { ChannelVideos, RecommendedVideo, VideoMetadata } from "@/types";
 import { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 import { useParams } from "react-router-dom";
-
+// @DaveGrayTeachesCode
 export default function ViewShow() {
   const { showId } = useParams<{ showId: string }>();
   const [playing, setPlaying] = useState(false);
   const [videoData, setVideoData] = useState<VideoMetadata | null>(null);
+  const [channelVideos, setChannelVideos] = useState<ChannelVideos | null>(
+    null
+  );
   const [recommendedVideos, setRecommendedVideos] = useState<
     RecommendedVideo[]
   >([]);
@@ -37,6 +44,16 @@ export default function ViewShow() {
     "https://www.youtube.com/watch?v=cc_xmawJ8Kg",
   ];
 
+  const fetchChannels = async () => {
+    try {
+      const data = await getChannelVideos("UCX6OQ3DkcsbYNE6H8uQQuVA");
+      setChannelVideos(data);
+    } catch (error) {
+      console.error("Error fetching channel videos:", error);
+    } finally {
+      setLoading(true);
+    }
+  };
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -48,10 +65,11 @@ export default function ViewShow() {
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
-        setLoading(false);
+        setLoading(true);
       }
     };
     fetchData();
+    fetchChannels();
   }, [videoUrl]);
 
   const handleTimestampClick = (seconds: number) => {
@@ -59,6 +77,36 @@ export default function ViewShow() {
       playerRef.current.seekTo(seconds);
     }
   };
+  if (loading)
+    return (
+      <div>
+        <h1>{channelVideos?.channel.title}</h1>
+        <p>{channelVideos?.channel.description}</p>
+        <img src={channelVideos?.channel.thumbnail} alt="Channel Thumbnail" />
+
+        <h2>Live Streams</h2>
+        <ul>
+          {channelVideos?.liveStreams.map((video) => (
+            <li key={video.id}>
+              <img src={video.thumbnail} alt={video.title} />
+              <h3>{video.title}</h3>
+              <p>{video.publishedAt}</p>
+            </li>
+          ))}
+        </ul>
+
+        <h2>Uploads</h2>
+        <ul>
+          {channelVideos?.uploads.map((video) => (
+            <li key={video.id}>
+              <img src={video.thumbnail} alt={video.title} />
+              <h3>{video.title}</h3>
+              <p>{video.publishedAt}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
 
   return (
     <div className="min-h-screen bg-background">

@@ -111,7 +111,7 @@ export async function getVideoMetadata(url: string): Promise<VideoMetadata> {
       duration: formatDuration(videoData.contentDetails.duration),
       channel: {
         name: videoData.snippet.channelTitle,
-        subscribers: "N/A", // You'd need an additional API call to get this
+        subscribers: "N/A", // I need an additional API call to get this
         avatar: videoData.snippet.thumbnails.default.url,
       },
       hashtags: videoData.snippet.tags || [],
