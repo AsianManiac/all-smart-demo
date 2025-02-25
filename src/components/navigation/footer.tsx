@@ -9,8 +9,9 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">About Us</h3>
             <p>
-              Reality TV is your go-to destination for the most exciting and
-              dramatic reality shows. Stay tuned for non-stop entertainment!
+              Allsmart Allstar TV is your go-to destination for the most
+              exciting and dramatic reality shows. Stay tuned for non-stop
+              entertainment!
             </p>
           </div>
           <div>

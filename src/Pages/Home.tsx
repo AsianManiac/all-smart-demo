@@ -161,7 +161,7 @@ export default function Home() {
               <Card key={`${show.id}_${index}`} className="overflow-hidden">
                 <div className="aspect-video relative">
                   <img
-                    src={show.channel.avatar || "/placeholder.svg"}
+                    src={show.allThumbnails.medium.url || "/placeholder.svg"}
                     alt={show.title}
                     className="w-full h-full object-cover"
                   />
@@ -190,7 +190,7 @@ export default function Home() {
       <section className="py-16 bg-gray-900 text-primary-foreground">
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-4">Never Miss a Show</h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 max-w-2xl mx-auto px-4">
             Subscribe to our newsletter and stay updated with the latest shows,
             episodes, and behind-the-scenes content.
           </p>

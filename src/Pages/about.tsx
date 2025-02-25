@@ -31,7 +31,7 @@ export default function About() {
               Africa's Premier Reality TV Network
             </h1>
             <p className="text-lg md:text-xl opacity-90">
-              Bringing you the best in African entertainment since 2010
+              Bringing you the best in African entertainment since 20**
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function About() {
               className="absolute top-4 right-4 text-lg py-2 px-4"
               variant="secondary"
             >
-              Est. 2010
+              Est. 20**
             </Badge>
           </div>
         </div>
@@ -123,14 +123,14 @@ export default function About() {
               Best Reality TV Network
             </h3>
             <p className="text-muted-foreground">
-              African Entertainment Awards 2023
+              African Entertainment Awards 20**
             </p>
           </Card>
           <Card className="p-6">
             <Star className="w-12 h-12 mb-4" />
             <h3 className="text-xl font-semibold mb-2">Most Watched Network</h3>
             <p className="text-muted-foreground">
-              Digital Broadcasting Awards 2023
+              Digital Broadcasting Awards 20**
             </p>
           </Card>
           <Card className="p-6">
@@ -139,7 +139,7 @@ export default function About() {
               Innovation in Broadcasting
             </h3>
             <p className="text-muted-foreground">
-              African Media Excellence 2023
+              African Media Excellence 20**
             </p>
           </Card>
         </div>

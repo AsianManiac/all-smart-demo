@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import {
   PayPalButtons,
   PayPalCardFieldsProvider,
@@ -178,93 +179,94 @@ export default function PaypalPayment() {
                 label: "paypal",
               }}
             />
-
-            <PayPalCardFieldsProvider
-              createOrder={createOrder}
-              // @ts-expect-error
-              onApprove={onApprove}
-              style={{
-                input: {
-                  "font-size": "16px",
-                  "font-family": "courier, monospace",
-                  "font-weight": "lighter",
-                  color: "#ccc",
-                },
-                ".invalid": { color: "purple" },
-              }}
-            >
-              <PayPalNameField
+            <div>
+              <PayPalCardFieldsProvider
+                createOrder={createOrder}
+                // @ts-expect-error
+                onApprove={onApprove}
                 style={{
-                  input: { color: "blue" },
+                  input: {
+                    "font-size": "16px",
+                    "font-family": "courier, monospace",
+                    "font-weight": "lighter",
+                    color: "#ccc",
+                  },
                   ".invalid": { color: "purple" },
                 }}
-              />
-              <PayPalNumberField />
-              <PayPalExpiryField />
-              <PayPalCVVField />
+              >
+                <PayPalNameField
+                  style={{
+                    input: { color: "blue" },
+                    ".invalid": { color: "purple" },
+                  }}
+                />
+                <PayPalNumberField />
+                <PayPalExpiryField />
+                <PayPalCVVField />
 
-              <input
-                type="text"
-                id="card-billing-address-line-2"
-                name="card-billing-address-line-2"
-                placeholder="Address line 1"
-                onChange={(e) =>
-                  handleBillingAddressChange("addressLine1", e.target.value)
-                }
-              />
-              <input
-                type="text"
-                id="card-billing-address-line-2"
-                name="card-billing-address-line-2"
-                placeholder="Address line 2"
-                onChange={(e) =>
-                  handleBillingAddressChange("addressLine2", e.target.value)
-                }
-              />
-              <input
-                type="text"
-                id="card-billing-address-admin-area-line-1"
-                name="card-billing-address-admin-area-line-1"
-                placeholder="Admin area line 1"
-                onChange={(e) =>
-                  handleBillingAddressChange("adminArea1", e.target.value)
-                }
-              />
-              <input
-                type="text"
-                id="card-billing-address-admin-area-line-2"
-                name="card-billing-address-admin-area-line-2"
-                placeholder="Admin area line 2"
-                onChange={(e) =>
-                  handleBillingAddressChange("adminArea2", e.target.value)
-                }
-              />
-              <input
-                type="text"
-                id="card-billing-address-country-code"
-                name="card-billing-address-country-code"
-                placeholder="Country code"
-                onChange={(e) =>
-                  handleBillingAddressChange("countryCode", e.target.value)
-                }
-              />
-              <input
-                type="text"
-                id="card-billing-address-postal-code"
-                name="card-billing-address-postal-code"
-                placeholder="Postal/zip code"
-                onChange={(e) =>
-                  handleBillingAddressChange("postalCode", e.target.value)
-                }
-              />
+                <Input
+                  type="text"
+                  id="card-billing-address-line-2"
+                  name="card-billing-address-line-2"
+                  placeholder="Address line 1"
+                  onChange={(e) =>
+                    handleBillingAddressChange("addressLine1", e.target.value)
+                  }
+                />
+                <Input
+                  type="text"
+                  id="card-billing-address-line-2"
+                  name="card-billing-address-line-2"
+                  placeholder="Address line 2"
+                  onChange={(e) =>
+                    handleBillingAddressChange("addressLine2", e.target.value)
+                  }
+                />
+                <Input
+                  type="text"
+                  id="card-billing-address-admin-area-line-1"
+                  name="card-billing-address-admin-area-line-1"
+                  placeholder="Admin area line 1"
+                  onChange={(e) =>
+                    handleBillingAddressChange("adminArea1", e.target.value)
+                  }
+                />
+                <Input
+                  type="text"
+                  id="card-billing-address-admin-area-line-2"
+                  name="card-billing-address-admin-area-line-2"
+                  placeholder="Admin area line 2"
+                  onChange={(e) =>
+                    handleBillingAddressChange("adminArea2", e.target.value)
+                  }
+                />
+                <Input
+                  type="text"
+                  id="card-billing-address-country-code"
+                  name="card-billing-address-country-code"
+                  placeholder="Country code"
+                  onChange={(e) =>
+                    handleBillingAddressChange("countryCode", e.target.value)
+                  }
+                />
+                <Input
+                  type="text"
+                  id="card-billing-address-postal-code"
+                  name="card-billing-address-postal-code"
+                  placeholder="Postal/zip code"
+                  onChange={(e) =>
+                    handleBillingAddressChange("postalCode", e.target.value)
+                  }
+                />
 
-              {/* Custom client component to handle card fields submission */}
-              <SubmitPayment
-                isPaying={isPaying}
-                setIsPaying={setIsPaying}
-                billingAddress={billingAddress}
-              />
-            </PayPalCardFieldsProvider>
+                {/* Custom client component to handle card fields submission */}
+                <SubmitPayment
+                  isPaying={isPaying}
+                  setIsPaying={setIsPaying}
+                  billingAddress={billingAddress}
+                />
+              </PayPalCardFieldsProvider>
+            </div>
 
             <div className="flex justify-start pt-4">
               <Button

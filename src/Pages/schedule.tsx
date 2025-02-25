@@ -1,6 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { getRecommendedVideos } from "@/lib/video";
 import type { RecommendedVideo } from "@/types";
@@ -159,16 +164,30 @@ export default function SchedulePage() {
                     <Card key={show.id} className="p-6">
                       <div className="flex flex-col md:flex-row gap-6">
                         <div className="flex items-start gap-4 md:w-1/3">
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-5 h-5 text-muted-foreground" />
-                            <span className="text-lg font-semibold">
-                              {show.time}
-                            </span>
+                          <div className="flex flex-col items-center gap-2">
+                            <div className="flex items-center gap-2">
+                              <Clock className="w-5 h-5 text-muted-foreground" />
+                              <span className="text-lg font-semibold">
+                                {show.time}
+                              </span>
+                            </div>
+                            <img
+                              src={show.allThumbnails.default.url}
+                              alt={show.title}
+                              className="w-full h-full object-cover rounded-md"
+                            />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-lg">
-                              {show.title}
-                            </h3>
+                            <Popover>
+                              <PopoverTrigger>
+                                <h3 className="font-semibold text-lg line-clamp-4 text-left">
+                                  {show.title}
+                                </h3>
+                              </PopoverTrigger>
+                              <PopoverContent className="w-80">
+                                <p className="    ">{show.title}</p>
+                              </PopoverContent>
+                            </Popover>
                             <Badge variant="secondary" className="mt-1">
                               {SHOW_TYPES.REALITY}
                             </Badge>
@@ -199,7 +218,11 @@ export default function SchedulePage() {
                             </Button>
                           )}
                           {show.status === "completed" && (
-                            <Button variant="secondary" className="gap-2">
+                            <Button
+                              variant="secondary"
+                              className="gap-2"
+                              onClick={() => navigate(`/shows/${show.id}`)}
+                            >
                               <CheckCircle className="w-5 h-5" />
                               Watch Recording
                             </Button>
@@ -225,7 +248,7 @@ export default function SchedulePage() {
                   className="aspect-video mb-4 cursor-pointer"
                 >
                   <img
-                    src={show.channel.avatar || "/placeholder.svg"}
+                    src={show.allThumbnails.medium.url}
                     alt={show.title}
                     className="w-full h-full object-cover rounded-md"
                   />
@@ -255,7 +278,7 @@ export default function SchedulePage() {
                   className="aspect-video mb-4 cursor-pointer"
                 >
                   <img
-                    src={show.channel.avatar || "/placeholder.svg"}
+                    src={show.allThumbnails.medium.url}
                     alt={show.title}
                     className="w-full h-full object-cover rounded-md"
                   />
@@ -266,7 +289,11 @@ export default function SchedulePage() {
                 <p className="text-sm text-muted-foreground mb-2">
                   Aired on {show.day} at {show.time}
                 </p>
-                <Button variant="secondary" className="w-full">
+                <Button
+                  variant="secondary"
+                  className="w-full"
+                  onClick={() => navigate(`/shows/${show.id}`)}
+                >
                   Watch Recording
                 </Button>
               </Card>
