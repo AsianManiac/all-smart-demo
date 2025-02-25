@@ -109,9 +109,9 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
           </AvatarFallback>
         </Avatar>
         <div className="flex-1">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-wrap">
             <span className="font-semibold">{comment.author}</span>
-            <span className="text-xs text-muted-foreground">
+            <span className="text-xs text-muted-foreground text-wrap pr-1">
               {comment.publishedAt}
             </span>
           </div>

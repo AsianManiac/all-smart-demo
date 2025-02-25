@@ -194,7 +194,7 @@ export default function Home() {
             Subscribe to our newsletter and stay updated with the latest shows,
             episodes, and behind-the-scenes content.
           </p>
-          <div className="flex gap-4 max-w-md mx-auto">
+          <div className="flex gap-4 max-w-md mx-autopx-4">
             <input
               type="email"
               placeholder="Enter your email"

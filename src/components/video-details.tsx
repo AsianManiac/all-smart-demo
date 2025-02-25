@@ -4,7 +4,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { parseTimestamps } from "@/lib/utils";
 import { formatLink, formatNumber } from "@/lib/video";
 import type { VideoMetadata } from "@/types";
-import { MessageCircle, Share2, ThumbsUp } from "lucide-react";
+import { MessageCircle, ThumbsUp } from "lucide-react";
 import type React from "react";
 
 interface VideoDetailsProps {
@@ -81,7 +81,7 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">{videoData.title}</h1>
       <div className="flex items-center justify-between mt-4">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2">
           <Avatar className="w-10 h-10">
             <AvatarImage
               src={videoData.channel.avatar}
@@ -92,12 +92,13 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
             </AvatarFallback>
           </Avatar>
           <div>
-            <h3 className="font-semibold">{videoData.channel.name}</h3>
-            <p className="text-sm text-muted-foreground">
+            <h3 className="font-semibold text-sm md:text-base">
+              {videoData.channel.name}
+            </h3>
+            <p className="text-xs text-muted-foreground">
               {videoData.channel.subscribers} subscribers
             </p>
           </div>
-          <Button variant="secondary">Subscribe</Button>
         </div>
 
         <div className="flex items-center gap-2">
@@ -108,9 +109,6 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
           <Button variant="secondary" className="flex items-center gap-2">
             <MessageCircle className="w-4 h-4" />
             {videoData.comments.length}
-          </Button>
-          <Button variant="secondary">
-            <Share2 className="w-4 h-4" />
           </Button>
         </div>
       </div>

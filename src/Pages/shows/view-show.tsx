@@ -205,7 +205,6 @@ const VideoDetailsSkeleton = () => (
       </div>
       <div className="flex gap-2">
         <Skeleton className="w-20 h-8" />
-        <Skeleton className="w-20 h-8" />
         <Skeleton className="w-8 h-8" />
       </div>
     </div>
