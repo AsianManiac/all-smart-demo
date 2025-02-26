@@ -1,3 +1,5 @@
+"use client";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,17 +12,48 @@ import {
 import type { Comment } from "@/types";
 import { ChevronDown, ChevronUp, ThumbsUp } from "lucide-react";
 import type React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ErrorState } from "./navigation/api-state";
+import { NoComments } from "./navigation/empty-state";
+import { VideoCommentsSkeleton } from "./skeleton-loaders";
 
 interface VideoCommentsProps {
   comments: Comment[];
+  isLoading?: boolean;
+  isError?: boolean;
+  error?: Error | null;
+  commentsDisabled?: boolean;
+  onRetry?: () => void;
 }
 
 const VideoComments: React.FC<VideoCommentsProps> = ({
-  comments: initialComments,
+  comments: initialComments = [],
+  isLoading = false,
+  isError = false,
+  error = null,
+  commentsDisabled = false,
+  onRetry,
 }) => {
-  const [comments, setComments] = useState(initialComments);
+  const [comments, setComments] = useState(
+    (initialComments || []).map((comment) => ({
+      ...comment,
+      expanded: false,
+      showReplies: false,
+    }))
+  );
   const [sortBy, setSortBy] = useState<"top" | "newest">("top");
+
+  useEffect(() => {
+    if (initialComments.length > 0) {
+      setComments(
+        initialComments.map((comment) => ({
+          ...comment,
+          expanded: false,
+          showReplies: false,
+        }))
+      );
+    }
+  }, [initialComments]);
 
   const toggleCommentExpansion = (commentId: string) => {
     setComments((prevComments) =>
@@ -54,10 +87,12 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
       }
     });
     setComments(sortedComments);
-    console.log(sortBy);
   };
 
-  const renderComment = (comment: Comment, isReply = false) => {
+  const renderComment = (
+    comment: Comment & { expanded?: boolean; showReplies?: boolean },
+    isReply = false
+  ) => {
     const isLongComment = comment.textDisplay.length > 300;
     const displayText =
       isLongComment && !comment.expanded
@@ -66,7 +101,7 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
 
     const tailwindColors = [
       "bg-red-500",
-      "bg-yello-500",
+      "bg-yellow-500",
       "bg-green-500",
       "bg-blue-500",
       "bg-indigo-500",
@@ -89,7 +124,7 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
 
     const initials = name
       .split(" ")
-      .map((word) => word[1])
+      .map((word) => word[0])
       .join("")
       .toUpperCase();
     const fallbackColorClass = generateRandomTailwindColor(name);
@@ -97,9 +132,9 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
     return (
       <div
         key={comment.id}
-        className={`flex gap-4 mb-1 ${isReply ? "ml-8" : ""}`}
+        className={`flex gap-4 mb-4 ${isReply ? "ml-8" : ""}`}
       >
-        <Avatar className="w-8 h-8">
+        <Avatar className="w-8 h-8 flex-shrink-0">
           <AvatarImage
             src={comment.authorProfileImageUrl}
             alt={comment.author}
@@ -148,7 +183,7 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
                 variant="ghost"
                 size="sm"
                 onClick={() => toggleReplies(comment.id)}
-                className="flex items-center gap-2 text-primary rounded-full hover:text-primary hover:bg-primary/20  "
+                className="flex items-center gap-2 text-primary rounded-full hover:text-primary hover:bg-primary/20"
               >
                 {comment.showReplies ? (
                   <ChevronUp className="w-4 h-4" />
@@ -160,7 +195,9 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
               </Button>
               {comment.showReplies && (
                 <div className="mt-2">
-                  {comment.replies.map((reply) => renderComment(reply, true))}
+                  {comment.replies.map((reply) =>
+                    renderComment({ ...reply, expanded: false }, true)
+                  )}
                 </div>
               )}
             </div>
@@ -170,12 +207,25 @@ const VideoComments: React.FC<VideoCommentsProps> = ({
     );
   };
 
+  if (isLoading) {
+    return <VideoCommentsSkeleton />;
+  }
+
+  if (isError) {
+    return <ErrorState error={error} onRetry={onRetry} />;
+  }
+
+  if (commentsDisabled || comments.length === 0) {
+    return <NoComments />;
+  }
+
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
         <h2 className="text-xl font-semibold">{comments.length} Comments</h2>
         <Select
           onValueChange={(value) => sortComments(value as "top" | "newest")}
+          defaultValue={sortBy}
         >
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Sort comments" />

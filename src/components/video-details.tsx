@@ -6,15 +6,26 @@ import { formatLink, formatNumber } from "@/lib/video";
 import type { VideoMetadata } from "@/types";
 import { MessageCircle, ThumbsUp } from "lucide-react";
 import type React from "react";
+import { ErrorState } from "./navigation/api-state";
+import { NoVideos } from "./navigation/empty-state";
+import { VideoDetailsSkeleton } from "./skeleton-loaders";
 
 interface VideoDetailsProps {
-  videoData: VideoMetadata;
+  videoData: VideoMetadata | null;
+  isLoading?: boolean;
+  isError?: boolean;
+  error?: Error | null;
   onTimestampClick: (seconds: number) => void;
+  onRetry?: () => void;
 }
 
 const VideoDetails: React.FC<VideoDetailsProps> = ({
   videoData,
+  isLoading = false,
+  isError = false,
+  error = null,
   onTimestampClick,
+  onRetry,
 }) => {
   const renderDescription = (text: string) => {
     const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -36,9 +47,9 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
             const formattedTime = hours
               ? `${hours}${minutes}:${secs}`
               : `${minutes}:${secs}`;
-            return `<span class="text-primary ${match} font-normal hover:underline cursor-pointer" data-timestamp="${seconds}">${
+            return `<span class="text-primary ${match} font-normal hover:underline align-top tracking-tight cursor-pointer" data-timestamp="${seconds}">${
               openParen || ""
-            }${formattedTime}${closeParen || ""} ${label}</span>`;
+            }${formattedTime}</span>${closeParen || ""} ${label}`;
           }
         );
       });
@@ -61,7 +72,7 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
       return (
         <p
           key={i}
-          className="mb-2"
+          className="timestamp"
           dangerouslySetInnerHTML={{ __html: processedLine }}
           onClick={(e) => handleTimestampClick(e)}
         />
@@ -77,6 +88,17 @@ const VideoDetails: React.FC<VideoDetailsProps> = ({
     }
   };
 
+  if (isLoading) {
+    return <VideoDetailsSkeleton />;
+  }
+
+  if (videoData === null) {
+    return <NoVideos />;
+  }
+
+  if (isError) {
+    return <ErrorState error={error} onRetry={onRetry} />;
+  }
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-bold">{videoData.title}</h1>

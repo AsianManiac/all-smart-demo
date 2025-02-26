@@ -4,12 +4,45 @@ import { RecommendedVideo } from "@/types";
 import { PlayCircle } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { ErrorState } from "./navigation/api-state";
+import { NoVideos } from "./navigation/empty-state";
+import { RecommendedVideosSkeleton } from "./skeleton-loaders";
 
 interface RecommendedVideosProps {
   videos: RecommendedVideo[];
+  isLoading?: boolean;
+  isError?: boolean;
+  error?: Error | null;
+  isEmpty?: boolean;
+  onRetry?: () => void;
 }
 
-const RecommendedVideos: React.FC<RecommendedVideosProps> = ({ videos }) => {
+const RecommendedVideos: React.FC<RecommendedVideosProps> = ({
+  videos,
+  isLoading = false,
+  isError = false,
+  error = null,
+  isEmpty = false,
+  onRetry,
+}) => {
+  if (isLoading) {
+    return <RecommendedVideosSkeleton />;
+  }
+
+  if (isError) {
+    return <ErrorState error={error} onRetry={onRetry} />;
+  }
+
+  if (isEmpty || videos.length === 0) {
+    return (
+      <NoVideos
+        title="No Recommended Videos"
+        description="We couldn't find any recommended videos at this time."
+        onRefresh={onRetry}
+      />
+    );
+  }
+
   return (
     <div className="space-y-4">
       <h2 className="font-semibold mb-4 text-xl">Recommended Videos</h2>

@@ -13,6 +13,7 @@ export interface VideoMetadata {
   };
   hashtags: string[];
   comments: Comment[];
+  commentsDisabled?: boolean;
 }
 
 export interface Comment {

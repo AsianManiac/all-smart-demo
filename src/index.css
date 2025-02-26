@@ -76,3 +76,6 @@ iframe:focus-visible {
 .comment a {
   @apply text-blue-500;
 }
+.timestamp {
+  margin-top: 0 !important;
+}
