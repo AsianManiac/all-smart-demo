@@ -3,6 +3,7 @@ import ShowLayout from "@/Layouts/show-layout";
 import {
   AboutPage,
   BankTransferPage,
+  CategoriesPage,
   ContactPage,
   DonationPage,
   HomePage,
@@ -22,6 +23,7 @@ function App() {
       <Route path="/sign-in" element={<SignInPage />} />
       <Route element={<AppLayout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<CategoriesPage />} />
         <Route path="/donate" element={<DonationPage />} />
         <Route path="/donate/success" element={<StripePaymentPage />} />
         <Route path="/donate/stripe" element={<StripePaymentPage />} />

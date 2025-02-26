@@ -6,6 +6,7 @@ export { default as MTNPaymentPage } from "@/Pages/donation/mtn-payment";
 export { default as PaypalPaymentPage } from "@/Pages/donation/paypal-payment";
 export { default as StripePaymentPage } from "@/Pages/donation/stripe-payment";
 export { default as SchedulePage } from "@/Pages/schedule";
+export { default as CategoriesPage } from "@/Pages/shows/categories";
 export { default as ShowsPage } from "@/Pages/shows/index";
 export { default as ViewShowPage } from "@/Pages/shows/view-show";
 export { default as SignInPage } from "@/Pages/sign-in";
